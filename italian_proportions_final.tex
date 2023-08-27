@@ -1,0 +1,1270 @@
+\documentclass[charis, linguex]{glossa}
+\let\B\relax 
+\let\T\relax
+\usepackage{tikz,pstricks,pst-jtree}
+\usepackage{tikz-qtree}
+\usepackage{tikz-qtree-compat}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\newcommand{\citesax}[1]{\citeauthor{#1}'s \citeyearpar{#1}}
+\newcommand{\rcommentg}[1]{\hfill\raisebox{1.9\baselineskip}[0pt][0pt]{#1}}
+\renewcommand{\firstrefdash}{} 
+
+\pdfauthor{Michelangelo Falco}
+\pdftitle{Italian proportions and (non-)conservativity}
+\pdfkeywords{measurements; percentages; fractions; determiners; agreement
+}
+
+\title[Italian proportions]{Italian proportions and (non-)conservativity \\ 
+\vspace{0.3cm} \normalsize{\url{https:// doi.org/10.16995/glossa.8524}}}
+
+\author[M. Falco]{
+ \spauthor{Michelangelo Falco\\ 
+  \institute{Leibniz-Zentrum Allgemeine Sprachwissenschaft}\\
+  \small{%Pariser Str. 1, 10719 Berlin\\
+  falco@leibniz-zas.de}
+  }
+  }
+  
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+	
+This paper describes the morpho-syntax and the interpretation of Italian
+proportional measure phrases (\textit{proportions}), namely fractions and
+percentages. \citet{ahn12} and \citet{sau14} first observed that the restrictor
+and the predicate of these structures can be switched by minimal
+morpho-syntactic modifications (\textit{MIT hired sixty percent \{of / of the\}
+women}) and identified quantifier floating for Korean and case for German as
+the morpho-syntactic markers of this reversal. Italian shows five novel
+morpho-syntactic markers: definiteness of the inner nominal, definiteness of
+the outer determiner, position with respect to the verb in main clauses, but
+not in subordinate clauses, and verb agreement. Also three interpretive factors
+are at play: the accessibility of the complement set, the type of predicate,
+and new information focus, whereas contrastive focus, playing a pivotal role in
+previous analyses, interacts with the restrictor/predicate reversal but is
+orthogonal to it. The discovered generalisations are only partially explained
+by current proposals and call for a new account.
+
+\end{abstract}
+
+\begin{keywords}
+measurements; percentages; fractions; determiners; agreement
+\end{keywords}
+\rmfamily
+
+
+\section{Introduction}\label{Sec:Intro}
+
+\citet{ahn12} and \citet{sau14} first observed that proportional measurement (PM) phrases (\textit{proportions}), namely fractions (e.g. \textit{two thirds} in \ref{nur}) and percentages (e.g. \textit{seventy percent} in \ref{nur1}), exhibit an interesting property when they are part of a sentence: the restrictor and the predicate can be switched by minimal morpho-syntactic modifications, beyond word order variations. This phenomenon is exemplified for English percentages by \ref{nurs} and \ref{nurs1}: dropping \textit{of the} in \ref{nurs1} leads to the switch of restrictor and predicate, as illustrated by the two free translations. In turn this fact poses a challenge for the current understanding of determiners semantics. This observation began an ongoing thread of research by Sauerland and colleagues which produced already a detailed and systematic description of PM structures in Korean and in German, as well as possible formal models of how the reversal could come about (\citealt{ahn15b,ahn15a,ahn17,pas22}, from now on S\&co).
+
+
+\ex. \a. two thirds of [the nurses] \label{nur}
+     \b. seventy percent of [the nurses] \label{nur1}
+	 
+\ex. \a. The hospital hired seventy percent of [the nurses]. 
+        \glt  `The hospital hired seventy percent of [the nurses].' \label{nurs} 
+     \b. The hospital hired seventy percent nurses. 
+	    \glt  `Seventy percent of the people hired by the hospital are nurses.' \label{nurs1} 
+
+
+The present article contributes to this recent research line providing the first detailed empirical description of the morpho-syntax and interpretation of Italian PM structures observed through the restrictor and predicate reversal phenomena lens. 
+
+These Italian structures are discussed in \citet[\S4]{fal19} and in \citet{fal23}, however in those analyses the reversal phenomena were not considered. Following the terminology adopted in \citet[\S4]{fal19}, we will designate the nouns inside the square bracket as \textit{inner nominals} and their determiners as the \textit{inner determiners}.\footnote{\citet{pas22} refer to the \textit{inner nominals} as \textit{substance nouns} and to \textit{inner determiners} as the \textit{substance nouns determiners}. } The fraction nominal (\textit{thirds}) and the percent adverb (\textit{percent}) will be referred to as \textit{outer nominals}, and the numerals \textit{two} and \textit{seventy} will be simply called \textit{numerals}. Exploring the Italian data, sometimes we will see also a determiner on the left of the numerals, and this will be called the \textit{outer determiner}.
+
+
+While in Korean overt quantifier floating and in German case are the morpho-syntactic markers for the restriction and predicate switch, a detailed investigation of Italian shows five different morpho-syntactic factors: definiteness of the inner nominal, definiteness of the outer determiner, pre-V or post-V position (as direct or indirect object, or as post-verbal subject) in the main clause, but not in subordinate clauses, verb agreement with the entire PM DP or with its inner noun. Furthermore, while Korean and German both require contrastive focus on the PM DP for the non-conservative interpretation according to S\&co, Italian shows the role of three different interpretive factors: accessibility of the complement set of the inner noun, type of predicate in the clause, and given or new information status of the PM DP.
+
+
+The interpretation of PM structures, like any other quantifier structure, depends on which phrase is interpreted as restrictor and which phrase is interpreted as predicate. Generally, restrictor and predicate are determined by their linear position and inverting their order produces sentences with completely different meanings as shown for Italian and for the English translations in \ref{filodonne}: while \ref{filosofi} is plausible, \ref{donneinf} is definitely false.\footnote{Of course, the linear order of restrictor and scope is reversed in left branching languages.} 
+
+\ex. \label{filodonne} 
+     \ag. Due terzi degli infermieri sono donne. \\    
+          two thirds {of the} nurses are women \\  
+	 \glt `Two thirds of the nurses are women.'  \label{filosofi}
+     \bg.  Due terzi delle donne sono infermiere. \\   
+	 	   two thirds {of the} women are nurses$_{F.PL}$ \\ 
+      \glt `Two thirds of the  women are nurses.'  \label{donneinf}
+
+
+The omission of the definite determiner preceding the inner noun \textit{women} in the Italian example brings about the \textit{reversed interpretation} in \ref{non-conservative}, as the translation shows: \textit{people hired}, that is the set denoted by the predicate \textit{hired}, is interpreted as restrictor of \textit{two thirds}, while \textit{women} is interpreted as its predicate, even though it linearly comes after \textit{people hired} and it is adjacent to the percentage it is not interpreted as its restrictor (cf. \citealt[ex.20]{ahn15a}).\footnote{As we saw, in English the reversed interpretation is obtained by removing also the preposition \textit{of} in \ref{non-conservative}, so that the corresponding English sentence is \textit{The hospital hired two thirds women} (cf. \citealt[ex.20]{ahn15a}). The case with the preposition and without the article \textit{two thirds of women} is not discussed in the literature. According to the English speakers I consulted, this case is equivalent to \textit{two thirds of the women} in terms of conservativity. Therefore, the Italian and the English preposition  in PM phrases are different.}
+
+ \ex. \label{femmiine}  \ag. L'ospedale ha assunto due terzi delle donne.  \\
+       {the hospital} has hired two thirds {of the} women \\     
+	\glt  `The hospital has hired two thirds of the women.' \label{conservative}	
+     \bg. L'ospedale ha assunto due terzi di donne.  \\
+       {the hospital} has hired two thirds of women \\     
+	\glt  `Two thirds of the people hired by the hospital are women.' \label{non-conservative}	
+		  
+The reversed interpretation we just saw \ref{non-conservative} is limited to PM phrases.\footnote{\label{footnote4}The same reversed interpretation can be obtained using a prepositional phrase and removing \textit{of} in front of the inner noun.  In these cases the PP (\textit{per due terzi} `for two thirds') becomes a modifier of the predicate, while \textit{donne} (`women') alone is the object of the clause. 
+
+\exg. L'ospedale ha assunto per due terzi donne. \\ 
+         {the hospital} has hired for two thirds women \\ 
+         \glt  `Two thirds of the people hired by the hospital are women.'
+		 				  
+As discussed in  \S\ref{Sec-conclusions}, the DP-adverbial construction is not a possibility with complex sentences.} In sentences containing absolute measure phrases (e.g. \textit{un centinaio} `about a hundred'), the same definite and indefinite alternation is possible \ref{universita}, but it is impossible to detect a reversal of restriction and predicate in the presence of an indefinite inner noun, as indicated in the translation of \ref{conservativeb}.
+		  
+		  
+\ex. \label{universita} 
+     \ag. L'ospedale ha assunto un centinaio delle donne. \\ 
+	      {the hospital} has hired a {about a hundred} {of the} women \\ 
+	\glt `The hospital has hired about one hundred of the women.'\label{conservativea}	
+     \bg. L'ospedale ha assunto un centinaio di donne. \\  
+		  {the hospital} has hired a {about a hundred} of women \\
+	\glt `The hospital has hired about one hundred of women.' \label{conservativeb}	
+   	 
+	 
+At first glance, it may seem that an ad-hoc structure for PM phrases \ref{femmiine}, different from absolute measurement phrases \ref{universita}, is necessary to account for the difference in terms of reversal. Actually, the different semantics of the two structures explains this difference thus pointing to structural uniformity (\citealt[\S\S2.2]{ahn15b}). As represented in the figures below, the two construals of a PM such as \ref{femmiine} consider the relation between the intersection of the restrictor (R) and the predicate (P) sets to either one of the two, namely for \ref{conservative} Figure \ref{fig1} and for \ref{non-conservative} Figure \ref{fig2}. However for an absolute measure, be it with a definite or indefinite inner noun, only the intersection itself enters the truth-conditions as shown by Figure \ref{fig3}. Therefore, we can assume that the structure of relative and absolute measure phrases is the same and the structural and interpretive mechanism at play in \ref{non-conservative} are at play also in \ref{conservativeb}, but apply vacuously, without producing an interpretive difference. In any case, the systematic presence of reversed readings \ref{non-conservative} raises the question of how to derive their interpretation from the syntax/semantics. 
+
+\begin{figure}[h!]
+\RawFloats
+\begin{minipage}[t]{0.3\textwidth}
+\def\first{(0,0) ellipse (3.5em and 2.5em)}
+  \def\second{(1.5,0) ellipse (3.5em and 2.5em)}
+\begin{tikzpicture}
+    \draw \first node [] {};
+    \draw \second node [] {};
+    % first coordinate control x axis, second controls y axis
+    \node at (-0.5,0) (A) {$R$};
+    \node at (0.8,0) (B) {$R \cap P$};
+    \node at (2,0) (C) {$P$};
+    \begin{scope}[fill opacity = .2]
+      \clip \first;
+      \fill[gray] \first;
+    \end{scope}
+  \end{tikzpicture}
+  \caption{Linear}\label{fig1}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.3\textwidth}
+ \def\first{(0,0) ellipse (3.5em and 2.5em)}
+  \def\second{(1.5,0) ellipse (3.5em and 2.5em)}
+ \begin{tikzpicture}
+    \draw \first node [] {};
+    \draw \second node [] {};
+    \node at (-0.5,0) (A) {$R$};
+    \node at (0.8,0) (B) {$R \cap P$};
+    \node at (2,0) (C) {$P$};
+    \begin{scope}[fill opacity = .2]
+      \clip \second;
+      \fill[gray] \second;
+    \end{scope}
+  \end{tikzpicture}
+  \caption{Reversed}\label{fig2}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.3\textwidth}
+  \def\first{(0,0) ellipse (3.5em and 2.5em)}
+   \def\second{(1.5,0) ellipse (3.5em and 2.5em)}
+ \begin{tikzpicture}
+     \draw \first node [] {};
+     \draw \second node [] {};
+     \node at (-0.5,0) (A) {$R$};
+     \node at (0.8,0) (B) {$R \cap P$};
+     \node at (2,0) (C) {$P$};
+    \begin{scope}[fill opacity = .2]
+       \clip \first;
+       \fill[gray] \second;
+     \end{scope}
+   \end{tikzpicture}
+   \caption{Intersective}\label{fig3}
+\end{minipage}
+\end{figure}
+
+
+
+Reversed interpretations cases such as \ref{non-conservative} are crucial for our understanding of determiners interpretation and quantification in general, as they seem counterexamples to the so called \textit{conservativity universal} \ref{conservativity}, proposed by \citet[260]{kee86}: conservativity is a property that could restrict the range of functions denoted by determiners. This property is illustrated for the determiner \textit{every} by the informal equivalence \ref{consex}, formalised in \ref{consdef}.
+
+\ex. \a. Every determiner is conservative $=$ Every determiner is a conservative determiner \label{consex} 
+\b. Conservativity $=$ A function $f$ is conservative iff for all $R$, $P$: $f(R)(P) = f(R)(R \cap P)$ ~~ \label{consdef}
+\c. Conservativity universal: all  determiners in natural languages denote conservative functions \label{conservativity}
+
+In simple words, \ref{consdef} means that in order to determine whether
+$f(R)(P)$ is true or false, we do not need to look at those entities in set $P$
+that are not in set $R$, that is all that matters is the entities in $R$. For
+example, in evaluating the sentence \textit{every determiner is conservative} in
+\ref{consex}, all needs to be considered is the entities in the set of
+determiners: if all of them are also in the set of conservative entities, the
+sentence is true, otherwise it is false. In other words, the entities that are
+not in the set of determiners do not matter for the truth or falsity of this
+sentence. Sentences involving linearly interpreted PM phrases and absolute
+measure phrases behave like sentences containing \textit{every} with respect to
+conservativity. In order to interpret \ref{conservative} and
+\ref{conservativea}-\ref{conservativeb}, we can zoom in the set of women only
+(set $R$ in Figure \ref{fig1} and in Figure \ref{fig3}). Therefore, the
+determiners occurring in these sentences obey and support the conservativity
+universal. Instead, the determiners appearing in reversely interpreted
+sentences, at least apparently, contradict the conservativity universal. In
+order to evaluate \ref{non-conservative}, we need to look beyond the set of
+women, at non-women in the set of people hired (set $P$ in Figure \ref{fig2}).
+Given this difference with respect to conservativity, the reversed
+interpretations are named \textit{non-conservative} and the linear
+non-reversed interpretations \textit{conservative}.\footnote{Other cases of
+proportional determiners giving rise to a non-conservative interpretation and
+previously identified in the literature \citep{wes85} involve sentences with
+\textit{many} and \textit{few}, which require the VP to be interpreted as
+restriction, instead of predicate, in certain linguistic contexts, as shown by
+the free translation \ref{Nobel}.
+
+\exi. Many Scandinavians have won the Nobel prize in the literature. \\ `Many
+of the Nobel prize winners are Scandinavians.' \label{Nobel}} In summary, the
+non-conservative case poses an issue for the conservativity universal
+and raises the question if it is actually invalid and should be discarded, or
+if the non-conservative cases actually respect conservativity, through
+invisible structure and rearrangement operations at the syntax/semantics
+interface. Crucially, the posited structure and operations need to be
+substantiated by morpho-syntactic evidence to be gathered by looking at how
+(non-)conservativity is marked cross-linguistically.
+
+Until the present special issue, non-conservative interpretations with PM have been systematically investigated only in Korean and in German (S\&co). In these two languages quantifier floating and case marking respectively
+play a crucial role in determining the two interpretations. For example
+\citet[p.219]{ahn17} report the following distinction in German between
+genitive conservative \ref{prozent1} and nominative non-conservative \ref{prozent2} measurement structures with proportions. 
+
+\ex. \a. \textit{Genitive, conservative} \\
+		\gll Dreißig Prozent der Studierenden arbeiten. \\ 
+          thirty percent the$_{GEN}$ students$_{GEN}$ work \\
+         \glt `Thirty percent of the students work.'  \label{prozent1}
+     \b. \textit{Nominative, non-conservative} \\ 
+	 	\gll Dreißig Prozent [Studierende]$_{FOC}$ arbeiten hier. \\
+          thirty percent [students$_{NOM}$]$_{FOC}$ work here \\
+          \glt `Thirty percent of the workers here are students.'  \label{prozent2}
+		 
+
+Semantically, according to S\&co, the distinction between the linear and the
+reversed interpretation correlates also with a necessary difference in focus
+placement: the reversed interpretation requires contrastive focus on the inner
+noun (marked with subscript FOC in \ref{prozent2}), while the linear
+interpretation allows different focus positioning. This fact plays an important
+role in S\&co analysis. Nevertheless, it does not hold in Italian where new
+information focus, conveying which part of the sentence contributes new
+information, is instead at play. In particular, the PM DP must be part of the
+new information focus in order to get a non-conservative interpretation.
+
+As we saw in the examples above with fractions \ref{conservative} vs. \ref{non-conservative} Italian marks the distinction through the presence or absence of a definite determiner on the inner noun. The facts are more complex and interesting when we consider also percentages, the second type of PM structures. In fact, Italian percentages require an overt definite or indefinite outer determiner \ref{definiteart}, differently from English, as noted in \citet[ex.55]{fal19}.\footnote{Italian \textit{percento} can be spelled also \textit{per cento}}
+
+\ex. \gll \{il / un / *$\emptyset$\} dieci percento  \\ 
+      \{the / a / *$\emptyset$\} ten percent \\ \label{definiteart}
+
+
+In turn the definite and indefinite alternation of the outer determiner affects the possibility of the inner noun (\textit{studenti}) to be indefinite, and thus exhibit a non-conservative interpretation. As a matter of fact, \textit{di} is unacceptable in \ref{percentdefi} when it is preceded by a definite article, and it is possible only in \ref{percentindefi}.\footnote{\label{novanta}A reviewer accepts the following sentence with an indefinite inner noun determiner and a definite outer determiner \ref{prozent3}.
+
+\ex. 	\gll Il novanta percento di italiani si sono vaccinati. \\
+                  the ninety percent of Italians self are vaccinated \\
+          \glt `Ninety percent of the Italians got vaccinated.'  \label{prozent3}
+
+We agree with this judgement, which is due to the generic reading the inner noun can get in this sentence: \textit{di italiani} denotes an entity instead of an actual set, is semantically equivalent to a definite, and gets a conservative interpretation. Anyway, this construal is marginal: a Google search performed on May 25th 2023 found a single occurrence of the DP \textit{il 10 per cento di italiani} (moreover involving a relative clause attached to the definite DP, see \ref{distudentisgwomenb}) and more than 14.000 occurrences of the DP phrase \textit{il 10 per cento degli italiani}.
+
+A reviewer finds acceptable percentages without an overt outer determiner and a definite inner determiner \ref{neroo}. Some variation, due to dialectal variants, ought to be acknowledged here. However, this case was judged completely out (\textit{*}) by all my informants coming from different Italian regions (Lazio, Lombardy, Sicily, Tuscany).
+
+\ex. \gll  [Dieci percento degli italiani] lavora in nero. \\
+               ten percent {of the} Italians works in black \\
+            \glt `Ten percent of the Italians works in black.'	\label{neroo}	
+		  
+		}
+
+\ex. \a.  \gll il dieci percento \{*di / degli\} italiani \\
+      the ten percent \{of / {of the}\} Italians \\ \label{percentdefi}
+    \b.\ \gll un dieci percento \{di / degli\} italiani \\
+      the ten percent \{of / {of the}\} Italians \\ \label{percentindefi}
+
+
+Looking beyond the DP level, according to my informants and contrary to \citet[ex.44]{ahn17}, in Italian only post-V indefinite percentages with an indefinite inner noun get a non-conservative construal, while sentences with the same percent DPs placed in pre-V position are  marginally acceptable with neutral intonation and get a conservative construal \ref{exam}, as shown by the free translation.
+
+\exg. ?Un sessanta percento di donne ha superato l'esame. \\
+      a sixty percent of women has passed {the exam}\\ \label{exam}
+   \glt    `About sixty percent of the women passed the exam.'  \rcommentg{\textit{Conservative}}
+   
+
+Furthermore, in the indefinite cases, singular masculine agreement with the whole DP is much preferred (\ref{agree-non-cons} vs. \ref{agree-cons}), so that \ref{agree-cons} with feminine plural agreement with the inner noun is marginal. Furthermore, to the extent that agreement with the inner noun could be accepted, it erases the non-conservative interpretation reinstating the conservative construal. In other words, in \ref{agree-cons} agreement with the inner noun makes \textit{di donne} (`of women') interpretively equivalent to \textit{delle donne} (`of the women').\footnote{Here, we introduce  the contrast with fraction outer nouns in order to avoid complications at this level. The full paradigm with percent outer nouns will be described in \S\ref{Sec-complex}.}
+
+
+\ex. \a. \textit{Non-conservative, PM DP agreement} \\
+    \gll \`{E} stato assunto [[un terzo] di donne]. \\
+      is been$_{M.SG}$ hired$_{M.SG}$ [[a third]$_{M.SG}$ of women$_{F.PL}$]$_{M.SG}$ \\
+	  \glt `One third of the people hired here are women.' \label{agree-non-cons} 
+	  \b. \textit{Conservative, inner noun agreement} \\
+	  \gll ??Sono state assunte [[un terzo] di donne]. \\
+	        were been$_{F.PL}$ hired$_{F.PL}$ [[a third]$_{M.SG}$ of women$_{F.PL}$]$_{M.SG}$  \\
+	  	  \glt `One third of the women were hired.' \label{agree-cons} 
+
+
+Finally, looking beyond the simple clause into complex sentences, proportions
+with an indefinite inner noun extracted from a relative clause get a
+non-conservative interpretation with an object, but crucially also with a
+subject relative clause \ref{distudentisgwomenb}, again with a strong
+preference for singular verb agreement with the whole PM DP. Note that here the
+non-conservative construal is confined in the relative clause
+itself.\footnote{In \ref{distudentisgwomenb} only number agreement is marked
+since gender agreement does not appear on the verb.}
+	
+\exg. Il sessanta percento di donne che ha superato l'esame scritto ha superato anche l'orale. \\ 
+      [the sixty percent of women$_{PL}$]$_{SG}$ who has$_{SG}$ passed {the exam} written has$_{SG}$ passed also {the oral} \\ \label{distudentisgwomenb}  
+	  \glt `Sixty percent of all people who passed the exam were women and those women passed also the oral exam.' 
+
+	   
+To summarise, the five morpho-syntax factors determining the interpretation of Italian PM structures were introduced: the (in-)definiteness of inner determiner, the (in-)definiteness of the outer determiner, the position of the PM DP with respect to the verb in main clauses, the verb agreement with the inner noun or with the entire PM DP, and the irrelevance of the position of the PM DP in subordinate clauses (Table \ref{table}). 
+
+\begin{center}
+\begin{tabular}{@{}lll@{}}
+\toprule
+\textbf{Morpho-syntactic factors}            & \multicolumn{1}{l}{\textbf{\begin{tabular}{@{}l@{}}Conservative \\ interpretation\end{tabular}}} & \textbf{\begin{tabular}{@{}l@{}}Non-Conservative \\ interpretation\end{tabular}} \\ \midrule
+\textit{1. inner noun determiner}               & \multicolumn{1}{l}{definite}              & absent                    \\
+\textit{2. outer noun determiner}               & \multicolumn{1}{l}{definite}              & absent/indefinite         \\
+\textit{3. main clause position}        & \multicolumn{1}{l}{pre-V}       & post-V          \\
+\textit{4. verb agreement} & \multicolumn{1}{l}{inner noun}       & whole DP   \\
+\textit{5. subordinate clause position} & \multicolumn{1}{l}{pre-V or post-V}       & pre-V or post-V    \\ 
+ \bottomrule
+\end{tabular}
+\captionof{table}{Morpho-syntactic factors and conservative/non-conservative interpretations}\label{table}
+ \end{center} 
+Apart from the morpho-syntactic factors peculiar of Italian which are the focus of the present contribution, we will see that three other factors, traditionally pertaining to other linguistic domains, affect the (non-)conservative interpretation: the lexical semantics of the inner noun, the lexical semantics of the predicate of the clause containing the PM DP, and the information status of the PM DP in the sentence (Table \ref{table1}). 
+
+\begin{center}
+\setlength{\tabcolsep}{2pt}
+\begin{tabular}{@{}lll@{}}
+\toprule
+\textbf{Non morpho-syntactic factors}          & \multicolumn{1}{l}{\textbf{\begin{tabular}{@{}l@{}}Conservative \\ interpretation\end{tabular}}} & \textbf{\begin{tabular}{@{}l@{}}Non-Conservative \\ interpretation\end{tabular}} \\ \midrule
+\textit{1. inner noun lexical semantics}   & \multicolumn{1}{l}{inaccessible complement set}                               & accessible complement set        \\
+\textit{2. predicate lexical semantics}         & \multicolumn{1}{l}{individual-level}      &  stage-level  \\ 
+\textit{3. focus}   & \multicolumn{1}{l}{given information}                               & new information           \\
+ \bottomrule
+\end{tabular}
+\captionof{table}{Non morpho-syntactic factors and conservative/non-conservative interpretations}\label{table1}
+ \end{center}
+In order to get the non-conservative construal all the eight factors listed under the relevant column must be fulfilled, in other words whenever at least one of the factors is not fulfilled the conservative construal prevails. As we have already seen in some of the examples introduced so far, the eight factors display mutual interactions and entailments which are to be uncovered and which a satisfactory account should explain. 
+
+Methodologically, since some of the judgements which constitute the empirical basis for the generalisations are not clear-cut, six Italian native speakers from four different Italian regions (Lazio, Lombardy, Sicily, Tuscany) were asked to judge the examples proposed throughout the paper. 
+
+
+In the rest of the article, each of the listed factors is analysed in detail.
+Preliminarily, the background on the morpho-syntax of Italian measures
+structures in general (\S\ref{Sec-background}) and specifically on fractions
+(\S\S\ref{SubSec-fractionsDP}) and on percentages (\S\S\ref{SubSec-percentDP})
+is laid off as the basis for the discussion. Then the factors affecting
+conservativity at the DP level are described (\S\ref{Sec-DP}):
+\S\S\ref{SubSec-Definiteness} shows how the definiteness of the inner and outer
+determiners shape the conservative and non-conservative interpretations, which
+can be facilitated by the inner noun lexical semantics, while
+\S\S\ref{SubSec-Adjectives-Focus} presents data on complex inner NPs including
+an adjective which highlights how contrastive focalisation interacts with
+conservativity, but is orthogonal to it. After the intra PM DP level, the paper
+looks outside of the PM DP by placing it in the context of the simple clause
+(\S\ref{Sec-Clause}), where the predicate lexical semantics becomes relevant.
+\S\S\ref{Sub-Sec-Position} discusses the role of the position of the PM DP with
+respect to the verb and relates the position to the information status the PM
+DP gets, while \S\S\ref{Sub-Sec-VerbAgreement} shows how verb agreement affects
+(non-)conservativity in the simple clause. At this point we further zoom out of
+the simple clause and look at PM DPs in the context of complex sentences with a
+relative clause, where the indefiniteness and the position requirements, seen
+in simple clauses, become irrelevant (\S\S\ref{Sec-complex}).
+\S\S\ref{SubSec-verb-sub} presents the effects of verb agreement in relative
+clauses, while \S\S\ref{SubSec-RelFocus} describes the interaction between
+(non-)conservativity and contrastive focus in complex sentences. The final
+section (\S\ref{Sec-conclusions}) illustrates why current theories of PM
+structures fail to fully account for the uncovered generalisations, but they
+offer a solid ground for building a comprehensive account of the Italian data.
+
+\section{Background on Italian proportions} \label{Sec-background}
+
+In this section the background on Italian measure structures, both absolute and
+relative, is introduced with a gradual approach. We begin presenting Italian
+relative measure structures in relation to absolute measure and to counting
+structures \S\S\ref{Sec-absvsrel}. At this level, the forms that simple measure
+phrases can take are considered abstracting away from the restrictions some of
+them impose on the \textit{DP internal syntax} and on the \textit{DP external
+syntax}. DP internal syntax refers to requirements the simple measure phrases
+impose on the syntactic form of the wider DPs they belong to. For example, we
+will see that some definite measure phrases require a modifier attached to
+them. DP external syntax refers to how these DPs themselves interact with the
+whole clause or sentence where they appear. We will see that this brings up the
+issue of the of conservative vs. non-conservative construals at the centre of
+this paper. The lexical meaning of fractions DPs and of percent DPs are
+described in \S\S\ref{SubSec-fractionsDP} and in \S\S\ref{SubSec-percentDP}
+respectively, taking into account also the DP internal restrictions they
+impose. The DP external syntax of PM structures will be the topic of the
+subsequent sections.
+
+\subsection{Measurement structures} \label{Sec-absvsrel}
+
+
+Paradigmatic measurement structures involve mass nouns (\textit{water}, \textit{sugar}, \textit{rice}, \dots) and measure terms \ref{measure} or container nouns \ref{container} or classifiers \ref{classifier} plus numeral modifiers. Plural measurements structures, as indicated by the determiners in round parenthesis in the three examples, can be bare, without an overt definite article, or they can preceded by a definite plural or indefinite determiner. When the indefinite determiner \textit{un} introduces a counting structure, it has a meaning of approximation which can be expressed in English by the adverb \textit{about}, but it has the grammatical role of the determiner, as shown in the translations and glossae respectively.\footnote{\label{fnlabel}The approximation meaning emerges clearly  by observing the interpretive clash created by  the adverb \textit{esattamente} (`exactly') in the  sentence in \ref{esatto}.
+
+\exg. \#Ci sono esattamente un dodici persone. \\
+          there are exactly a twelve persons.  \\ \label{esatto}
+          \glt  `There are exactly about twelve persons.'
+} Here the possible forms are listed abstracting away from the requirements some forms impose on the wider DP they occur in. Given the appropriate structural context, all the four combinations of the outer and inner, definite and indefinite determiners are possible.\footnote{Thanks to Roberto Zamparelli for noting that the cases with inner and outer definite determiners have a peculiar interpretation  (\ref{measure-c},  \ref{container-c}, \ref{classifier-c}). For example the DP in \ref{defdef} (\ref{measure-c}) is felicitous only if the water is specific and \textit{litres} refers to the litres  in total. Thus the DP refers to the measure not to the substance measured and it is natural with a continuation such as \textit{have been precisely measured}.
+
+\exg. i due litri dell'acqua \\
+the two litres {of the water} \\ 
+\glt  `the two litres of the water' \label{defdef}
+
+}
+
+
+ 
+\ex. \textit{Measure term}  \label{measure}
+	\a. \gll (i) due litri di acqua \\
+      (the) two liters of water \\ 
+	 \glt  `(the) two liters of water'  \label{measure-a}
+ 	\b. \gll (un) due litri di acqua \\
+       (a) two liters of water \\ 
+ 	 \glt  `(about) two liters of water'  \label{measure-b}	 
+ 	\c. \gll (i) due litri dell'acqua \\
+       (the) two liters {of the} water \\ 
+ 	 \glt  `(the) two liters of the water'  \label{measure-c}
+  	\d. \gll (un) due litri dell'acqua \\
+        (a) two liters {of the} water \\ 
+  	 \glt  `(about) two liters of the water'  \label{measure-d}
+	 
+\ex. \textit{Container noun} \label{container}
+	\a.  \gll (i) due cucchiaini  di zucchero \\ 
+      (the) two teaspoons  of sugar  \\ 
+	  \glt  `(the) two teaspoons of sugar    \label{container-a}
+  	\b.  \gll (un) due cucchiaini di zucchero \\ 
+        (a) two teaspoons  of sugar  \\ 
+  	  \glt  `(about) two teaspoons of sugar    \label{container-b}
+  	\c.  \gll (i) due cucchiaini dello zucchero \\ 
+        (the) two teaspoons  {of the} sugar  \\ 
+  	  \glt  `(the) two teaspoons of the sugar    \label{container-c}
+  	\d.  \gll (un) due cucchiaini  dello zucchero \\ 
+        (a) two teaspoons {of the} sugar  \\ 
+  	  \glt  `(about) two teaspoons {of the} sugar  \label{container-d}
+	  
+\ex. \textit{Classifier}  \label{classifier}
+	\a. \gll (i) due chicchi  di riso \\ 
+      (the) two grains of rice  \\ 
+	  \glt  `(the) two grains of rice   \label{classifier-a}
+  	\b. \gll (un) due chicchi  di riso \\ 
+        (a) two grains of rice  \\ 
+  	  \glt  `(about) two grains of rice   \label{classifier-b}
+  	\c. \gll (i) due chicchi  del riso \\ 
+        (the) two grains {of the} rice  \\ 
+  	  \glt  `(the) two grains of the rice   \label{classifier-c}
+  	\d. \gll (un) due chicchi  del riso \\ 
+        (a) two grains  {of the} rice  \\ 
+  	  \glt  `(about) two grains of the rice   \label{classifier-d}
+
+Quantities of plural count nouns can be counted as well, as illustrated in \ref{classifiercount}: the classifier (\textit{boxes}) repackages pluralities into higher order entities which can be counted.\footnote{Note that in the case with a definite inner determiner and a classifier \ref{books} the relation expressed by the DP between the two nouns  is not one of measure, but of possession. For this reason we excluded it in the paradigm in the text.
+
+\exg. le due scatole dei libri \\
+the two boxes {of the} books \\ 
+\glt  `the two boxes of the books' \label{books}
+
+
+}
+
+\ex. \textit{Classifier and count noun} \\ 
+	\gll (\{le / un\}) due scatole di libri \\ 
+      (\{the / a\}) two boxes  of  books  \\ 
+	  \glt  `(\{the / about\}) two boxes of books'  \label{classifiercount}	  	  
+
+	  
+Measurements structures in Italian and in English contrast with simple counting structures which typically involve count nouns (\textit{cats}, \textit{books}, \dots) and numeral modifiers directly modifying the count nouns as in \ref{count}. 
+
+\ex. \textit{Count noun} \\ 
+	\gll (\{i / un\}) tre gatti / libri \\ 
+      (\{the / a\}) three cats / books  \\   
+	  \glt  `(\{the / about\}) three cats / books' \label{count}	
+
+	
+
+
+   
+Counting structures involving a substance expressed by mass nouns are ungrammatical with a basic counting meaning \ref{mass}. However, mass nouns are possible in prima facie counting structures when they receive a kind interpretation \ref{masskind}, namely \textit{types of sugar} and \textit{types of rice} (as shown by the translation of \ref{masskind}) and the counting operation applies to these higher order entities. This shift through the presence of a silent classifier (\textit{types}) in \ref{masskind} makes it parallel to the classifier measure structure with a mass noun \ref{classifier} above. Therefore, the same DP in the two structures below is ungrammatical as a basic counting structure \ref{mass}, but it is acceptable as an absolute measurement structure \ref{masskind} involving a silent classifier.\footnote{As a matter of fact, structures parallel to \ref{masskind} in classifier languages  do exhibit an overt classifier as shown by the obligatory status of the classifier \textit{ge} in Mandarine Chinese \ref{classifier1} (for an overview see \citealt[\S 5]{sco20} ).
+
+\exg. san *(ge) ren \\ 
+           three \ (\textsc{clf}) people \\ \label{classifier1}
+		   
+		   }
+	  
+\ex. \a. \textit{Mass noun} \\  
+	\gll*(\{i / un\}) tre zuccheri / risi \\
+      (\{the / a\}) three sugars / rices   \\  
+	 \glt  `(\{the / about\}) three sugars / rices'   \label{mass}	
+\b. \textit{Mass noun, kind interpretation} \\   
+	 \gll (\{i / un\}) tre zuccheri / risi \\
+      (\{the / a\}) three sugars / rices   \\  
+	 \glt  `(\{the / about\}) three types of sugar / types of rice'  \label{masskind}	
+
+
+To summarise, counting structures involve count nouns whereas absolute measure structures involve mass nouns. If a count noun appears in an absolute measure structure, it must be repackaged into a higher order entity through a classifier \ref{classifiercount}.\footnote{By \textit{higher order} we mean in terms of ontological abstraction, not in terms of semantic type, in fact the semantic type of the classifier is actually lower ($<e>$ ) than the sets  it applies to ($<e,t>$).} When a mass noun appears in a count structure, a silent classifier can be present at the interpretive level, thus shifting it from a counting structure \ref{mass} into an absolute measure structure \ref{masskind}.
+
+Proportional (or relative) measurements are a special type of measurements where the measure is expressed in proportion to the quantity of the inner noun, instead of being expressed in absolute terms. PM come in two varieties: fractions \ref{fraction-mass} and percentages  \ref{percent-mass}. 
+
+\ex. \textit{Fraction of mass noun} \label{fraction-mass}
+\a.  \gll (i) due terzi di acqua \\
+          (the) two thirds of water \\
+     \glt `(the) two thirds of water'  \label{fraction-mass-a}
+\b.  \gll (un) due terzi di acqua \\
+          (a) two thirds of water \\
+ 	 \glt  `(about) two thirds of water'  \label{fraction-mass-b}
+\c. \gll (i) due terzi dell'acqua \\
+         (the) two thirds {of the water} \\
+    \glt `(the) two thirds of the water'  \label{fraction-mass-c}
+\d. \gll (un) due terzi dell'acqua \\
+        (a) two thirds {of the water} \\
+ 	 \glt  `(about) two thirds of the water'  \label{fraction-mass-d}
+	 
+	   
+\ex. \textit{Percentage of mass noun} \label{percent-mass}
+\a. \gll il venti percento di acqua \\
+         the  twenty percent of water \\
+    \glt `the  twenty percent of water'  \label{percent-mass-a}
+\b. \gll un venti percento di acqua \\
+        a  twenty percent of water \\
+    \glt `about twenty percent of water'  \label{percent-mass-b}
+\c. \gll il venti percento dell'acqua \\
+         the twenty percent {of the water} \\
+    \glt `(the) twenty percent of the water'  \label{percent-mass-c}		  
+\d. \gll un venti percento  dell'acqua \\
+	     a  twenty percent {of the water} \\
+    \glt `about  twenty percent of the water'  \label{percent-mass-d}
+	  
+	 
+
+Fractions \ref{fraction-count} and percentages \ref{percent-count} similarly to absolute measurements can both involve also count nouns. However, differently from absolute measurements which must combine with a measure term or a classifier in order to be measured, proportional measures, thanks to their proportional nature, can combine directly with count nouns and do not require a (overt or covert) classifier to be measured \ref{fraction-count}: \textit{\{di / degli\} italiani} (`\{of / {of the}\} Italians') does not refer to types of Italians and it is perfectly formed.
+
+\ex. \textit{Fraction of count noun}  \label{fraction-count}
+\a.	\gll (i) due terzi di italiani \\
+      (the) two thirds of Italians \\ 
+	  \glt  `(the) two thirds of Italians'   \label{fraction-count-a}	  
+\b.  \gll (un) due terzi di italiani \\
+          (a) two thirds of Italians \\ 
+  	  \glt  `(about) two thirds of Italians'   \label{fraction-count-b}
+\c.  \gll (i) due terzi degli italiani \\
+        (i) two thirds {of the} Italians \\ 
+  	  \glt  `(the) two thirds of the Italians'   \label{fraction-count-c}
+\d.  \gll (un) due terzi degli italiani \\
+        (a) two thirds {of the} Italians \\ 
+  	  \glt  `(about) two thirds of the Italians'   \label{fraction-count-d}
+	  
+\ex. \textit{Percentage of count noun} \label{percent-count}
+\a.	\gll il venti percento di italiani \\
+       the twenty percent of Italians  \\ 
+	 \glt  `(the) twenty percent of Italians'  \label{percent-count-a}
+\b. \gll un  venti percento di italiani \\
+       a twenty percent of Italians  \\ 
+ 	 \glt  `about twenty percent of Italians'  \label{percent-count-b}
+\c. \gll il venti percento degli italiani \\
+        the twenty percent  {of the} Italians  \\ 
+ 	 \glt  `(the) twenty percent of the Italians'  \label{percent-count-c}
+\d. \gll un venti percento degli italiani \\
+         a twenty percent  {of the} Italians  \\ 
+ 	 \glt  `about twenty percent of the Italians'  \label{percent-count-d}
+
+
+\subsection{Structure of fraction DPs}  \label{SubSec-fractionsDP}
+
+Italian fractions are masculine nouns referring to the numerator of a fraction, while the fraction name is derived from its denominator.\footnote{Italian fractions names under denominator 10 included are irregular in their morphological derivation from the denominator number name. Fractions names above denominator 11 included are derived by adding \textit{--esimo} to the denominator number name: \textit{undicesimo} (`eleventh') from \textit{undici} (`eleven'), \textit{dodicesimo} (`twelfth') from \textit{dodici} (`twelve'), etc.} For example, for the fraction noun \textit{quinto} (`fifth') the denominator is the number five from Latin \textit{quinque}.\footnote{\textit{quinto} (`fifth'), similarly to other Italian fraction names, can also be a noun with an ordinal meaning \ref{ordinalname}, designating the entity occupying the fifth position in a series. In this meaning the name can also be adjectivised as shown in \ref{ordinaladj}. Both the noun and adjectival ordinal meanings are not fractional, therefore they are not considered  in the present discussion.
+
+\exg. \{[il  quinto] / [la quinta]\}  della fila \\
+          \{[the fifth]$_{M}$ / [the fifth]$_{F}$\}  {of the} line \\ \label{ordinalname}
+
+\exg. la quinta parte \\
+      the$_{F}$ fifth$_{F}$ part$_{F}$ \\  \label{ordinaladj}
+	  
+Actually, Italian exhibits a lexical difference between fractional \textit{mezzo} (`half') and ordinal \textit{secondo} (`second'), while all the remaining fractions and ordinals are homophone.  English has the same difference between \textit{half} and \textit{second}, in addition English has  two distinct forms also for \textit{quarter} and \textit{fourth}. } As NPs fractions exhibit a productive inflectional morphology and can be singular \ref{Fraction_masc} or plural \ref{Fraction_plur}. Syntactically, the singular fraction NP is postponed to a singular indefinite article \ref{Fraction_masc}, while the plural fraction NP must be combined with a numeral expressing an integer equal to or greater than 2 \ref{Fraction_plur}.  In both cases, the DP formed with the numeral can be part of a more complex one, including an inner noun with or without determiner inside a prepositional phrase (\textit{\{di / degli\} studenti} `\{of / {of the}\} students') in \ref{Fraction_masc} and \ref{Fraction_plur}). 
+
+\ex. \ag. (*un) un quinto (\{di / degli\}  italiani)  \\
+      about a/one fifth (\{of / {of the}\} Italians) \\ \label{Fraction_masc}
+  \bg. (un) due quinti (\{di / degli\} italiani) \\
+      (about) two fifths$_{PL}$ (\{of / {of the}\} Italians) \\ \label{Fraction_plur}
+	  
+	   
+In addition to the bare cases illustrated in \ref{Fraction_masc} and \ref{Fraction_plur}, fractions (plus numeral) can be preceded by various determiners.  Interestingly, between the determiners choice on the main DP and on the inner noun inside the PP there is a relation subject to restrictions banning some combinations. Singular fractions can be preceded by a definite article or demonstrative instead of the indefinite article, but in this case the inner nouns must be definite \ref{D_Fraction_masc}.\footnote{\textit{l'} is the form that the Italian definite article \textit{il} (`the') takes in front of \textit{un}  and other words starting with a vowel.} Also plural fractions can be preceded by a plural definite or demonstrative determiner and also in this case the inner noun must be definite. Contrary to the case of singular fractions \ref{D_Fraction_masc}, an integer must be present after the definite plural determiners or the determiner becomes ill-formed (\textit{due} `two' in \ref{D_Fraction_plur}). Note that in \ref{D_Fraction_masc} \textit{un} (`a') must be omitted because it is totally recoverable from the morphology of the singular fraction \textit{quinto} (`fifth'), whereas in the morphology of the plural fraction in \ref{D_Fraction_plur} \textit{quinti} (`fifths') is compatible with an infinite number of numbers, therefore the number must be obligatorily specified. 
+
+\ex. \ag. \{il/l' / quel\} (*un) quinto (degli  italiani)   \\
+      \{the/the / that\} (a) fifth ({of the} Italians)  \\ \label{D_Fraction_masc}
+	 \bg. \{i / quei\} *(due) quinti (degli  italiani)   \\
+      \{the$_{PL}$ / those\} *(two) fifth ({of the} Italians)  \\ \label{D_Fraction_plur}
+	  
+
+Getting back to inflectional morphology, when definite determiners appear in Italian fractions they must agree in gender and number with the denominator noun \textit{quinti} in \ref{duequinti}, which means that they are masculine plural.
+
+	  \exg. \{i / *il / *le \} due quinti delle donne\\
+	  	  \{the$_{M.PL}$ / the$_{M.SG}$ / the$_{F.PL}$ \} two fifths$_{M.PL}$  of\_the women\\  \label{duequinti}
+
+
+As we saw, when the whole fraction DP is headed by a definite or by a demonstrative determiner, the inner NP must necessarily be headed by a definite determiner. Actually, in these cases also an indefinite with a modifier, typically a relative clause, produces a grammatical result \ref{Rel_D_Fraction_masc} and \ref{Rel_D_Fraction_plur}. This is due to the semantics of the definite article, which comes with a familiarity (among others \citealt{hei82}) and uniqueness (among others \citealt{rus05}) requirement. As originally noted by \citet[Ch.8]{kay94} and discussed by \citet{bar98} and \citet{zam98}, the presence of the relative clause allows for these two requirements to be met, even in the absence of a definite determiner on the inner noun.\footnote{Note that the relative clause does not make a sentence with an indefinite inner noun and a relative clause \ref{Rel_D_Fraction_plur_footnote1} interpretatively equal to a sentence where the inner determiner is actually definite, as in the latter case the relative clause can and is preferentially attached to the inner nouns \ref{Rel_D_Fraction_plur_footnote2}. 
+
+\ex. \ag. \{i / quei\} due quinti di  studenti *(che hanno superato l'esame)  \\
+      \{the$_{PL}$ / those\} two fifth of students (who have passed {the exam}) \\ \label{Rel_D_Fraction_plur_footnote1}	  
+     \bg. \{i / quei\} due quinti degli  studenti (che hanno superato l'esame)  \\
+	        \{the$_{PL}$ / those\} two fifth of students (who have passed {the exam}) \\ \label{Rel_D_Fraction_plur_footnote2}
+
+In \S\S\ref{SubSec-verb-sub} we will see that there are other, less standard, verb agreement possibilities. 	
+}
+
+\ex. \label{Rel_D} \ag. \{il / quel\} *(un) quinto di studenti *(che ha superato l'esame)  \\
+      \{the / that\} (a) fifth of students (that has passed {the exam}) \\ \label{Rel_D_Fraction_masc}
+	 \bg. \{i / quei\} due quinti di  studenti *(che hanno superato l'esame)  \\
+      \{the$_{PL}$ / those\} two fifth of students (that have passed {the exam}) \\ \label{Rel_D_Fraction_plur}
+	  
+
+ 
+\subsection{Structure of percent DPs} \label{SubSec-percentDP}
+
+Italian \textit{percento}, also spelled \textit{per cento}, lexically is an adverbial locution with the same meaning as English \textit{percent}, that is \textit{every one hundred}. Syntactically, \textit{percento} is postponed to a number (\textit{dieci} `ten' in \ref{percnoagree}) which in Italian must be preceded by a determiner to form a DP. This DP can be part of a more complex one, including an inner noun inside a prepositional phrase (\textit{degli studenti}) \ref{perc}. Morphologically, as an adverbial locution \textit{percento} does not exhibit productive inflectional morphology \ref{noagree}.\footnote{The Italian adverbial locution \textit{percento} can be adjectivised and nominalised assuming in both cases the form \textit{percentuale}, corresponding to the English adjective and noun \textit{percentage}.  As an adjective \ref{adjective} \textit{percentuale} means determined in the measure of a certain percent, or expressed with a denominator of 100. As an adjective \textit{percento} does agree with the noun it modifies \ref{agree}. The adjective \textit{percentuale} produces through derivational morphology the adverb \textit{percentualmente}, meaning according to a percent calculation. As a noun \textit{percentuale} has the same meaning of \textit{percentage}, it refers to the number of elements taken into consideration out of a total of 100, and it can be singular as in \ref{nounsing} or plural as in \ref{nounplur}. Since only the adverbial locution meaning is a PM, the present contribution focuses only on it.
+
+\ex. \ag.  \{un / il\} punto percentuale \\ 
+              \{a / the\} point percentage \\   \label{adjective}
+       \bg.  \{i                      /  $\emptyset$\}  punti percentuali \\
+             \{the$_{PL}$ / $\emptyset$\} points$_{PL}$ percentage$_{PL}$  \\ \label{agree}
+
+		  
+\ex. \ag. \{la / una\}  percentuale \\
+              \{the  / a\}  percentage \\  \label{nounsing}
+     \bg. \{le / $\emptyset$\} percentuali \\
+             \{the$_{PL}$ / $\emptyset$\}  percentages$_{PL}$ \\  \label{nounplur}}
+  
+
+\ex. \label{percnoagree} \ag. \{il / quel\} dieci percento (degli studenti) \\
+      \{the / that\} ten percent ({of the} students) \\ \label{perc}
+    \bg. *\{i / quei\} dieci percenti (degli studenti) \\
+       \{the$_{PL}$ / those$_{PL}$\}  ten percents$_{PL}$ ({of the} students) \\ \label{noagree}
+	   
+In addition to the definite article and the demonstrative illustrated in \ref{perc}, the determiners on the main percent DP can also be the indefinite article with a meaning of approximation we already saw \ref{overtdet}, but an article must always be present.\footnote{One could wonder if this indefinite determiner keeps the same meaning of approximation we saw for absolute measurement phrases (footnote \ref{fnlabel}), or if this meaning is lost as the determiner is obligatory and may have a simple formal import.  The interpretive clash created by the presence of \textit{esattamente} (`exactly') in \ref{ventidue} shows that the approximation meaning linked to the use of the indefinite article with measure phrases is preserved also in the case of percentages. 
+
+\exg. \#C'\`{e} esattamente un ventidue percento di donne.\\
+         {there is} exactly a {twenty two} percent of women\\ \label{ventidue}
+ \glt `There is exactly about twenty two percent of women.'
+	
+	} In this case also the determiner inside the inner PP in addition to the definite determiner illustrated in \ref{perc} has the possibility of being absent and only the bare preposition remains (\textit{di}). 
+
+\exg. \{un / *$\emptyset$\} dieci percento \{di / degli / di quegli\} studenti \\
+      \{about / $\emptyset$\}  ten   percent  \{of / {of the} / of those\} students \\ \label{overtdet}
+
+
+
+Interestingly, between the determiners choice on the main DP and on the inner noun inside the PP there is a relation subject to restrictions. When the whole percent is definite or demonstrative, the inner NP must necessarily be definite \ref{percentdef}, or an indefinite modified by a relative clause  \ref{percentindef}, for the same reasons we saw for fractions (\ref{duequinti} and \ref{Rel_D}). 
+
+\ex. \ag. \{il / quel\} dieci percento \{*di / degli\} studenti \\
+      \{the / that\} ten percent \{of / {of the}\} students \\ \label{percentdef}
+\bg. \{il / quel\} dieci percento di studenti *(che hanno superato l'esame) \\
+      \{the / that\} ten percent of students (that have passed {the exam}) \\ \label{percentindef}
+	  
+
+There is one exception to the restriction on the main DP and the inner noun determiners just identified. Existential sentences \ref{perdefmass} and sentences with containment predicates \ref{contperdefmass} involving percent DPs with a mass inner noun (\textit{zucchero}) allow the outer determiner to be definite and the mass inner noun to be indefinite. This is not the case for fractions \ref{fracdefmass} and \ref{contfracdefmass}, where the outer determiner (\textit{i} `the$_{PL}$') must be dropped. 
+
+	\ex. \ag. In questa marmellata c'\`{e} il dieci percento di zucchero. \\ 
+	      in this jam {there is} the ten percent of sugar \\ 
+		  \glt `Of all the ingredients in this jam ten percent is sugar.' \label{perdefmass}
+		  \bg. Questa marmellata contiene il dieci percento di zucchero. \\ 
+		  	      this jam contains the ten percent of sugar \\ 
+		  		  \glt `Of all the ingredients contained in this jam ten percent is sugar.' \label{contperdefmass}
+		  \cg. In questa marmellata ci sono (*i) due quinti di zucchero. \\ 
+	      in this jam there are (the$_{PL}$) two fifths of sugar \\ 
+		 \glt `Of all the ingredients in this jam two fifths are sugar.' \label{fracdefmass}	 
+	\dg. Questa marmellata contiene (*i) due quinti di zucchero. \\ 
+	      this jam contains (the$_{PL}$) two fifths of sugar \\ 
+		 \glt `Of all the ingredients contained in this jam two fifths are sugar.' \label{contfracdefmass}
+	  
+	  
+Italian percentages always take singular number and masculine gender, even when the inner noun is feminine \ref{percmasc}.
+
+\exg.  \{il / *i / *le / *la\} due percento delle donne \\
+	    \{the$_{M.SG}$ / the$_{M.PL}$ / the$_{F.PL}$ / the$_{F.SG}$\} two percent {of the} women$_{F.PL}$\\ \label{percmasc} 	
+
+In singular percent DPs, also in the case of a singular numeral (\textit{un percento} `one percent'), a definite or an indefinite article beside the numeral must be present (\textit{un} `a') \ref{overtdetun}. This requirement contrasts with what we saw for fraction DPs, where in the same context an indefinite article cannot be present \ref{Fraction_masc}. 
+
+\ex.  \gll \{un / *$\emptyset$\} un percento \{di / degli / di quegli\} studenti \\
+      \{about / $\emptyset$\}  one   percent  \{of / {of the} / of those\} students \\ \label{overtdetun}
+	
+Finally, to reinforce the requirement of a (singular) determiner in percentages, in \ref{salario} we see that a plural outer determiner (\textit{due} `two'), although not perfect and limited to peculiar contexts where the entirety is reached, is better than no determiner at all (\citealt[ex.66]{fal19}).\footnote{Sentences such as \ref{salario} seem to be acceptable only if they are generic.}
+         
+     
+\exg.  \{?Due / *$\emptyset$\} cinquanta percento di un salario fanno un salario intero. \\
+          \{two / $\emptyset$\} fifty percent  of a salary {make up} a salary whole\\
+          \glt  `Two fifty percents of a salary make up a whole salary.' \label{salario}
+  
+	  
+To conclude the section we briefly summarise the differences between fraction and percent DPs. The first difference is at the lexical level: fractions are nouns whereas \textit{percento} is an adverbial locution. This leads to the difference described at the morphological level: fractions are morphologically productive whereas \textit{percento} is not. At the syntactic level, while fraction DPs can appear without a determiner, or with a singular or plural determiner, percent DPs always require the presence of a singular definite or indefinite determiner. This requirement is also due to the adverbial, non nominal, nature of \textit{percento}, which needs an overt determiner to form a full-blown argumental DP phrase in Italian.  
+
+
+\section{The DP and (non-)conservative interpretations} \label{Sec-DP}
+
+Having introduced the internal structure of Italian PM DPs \S\ref{Sec-background}, we are now ready to describe their interpretation focusing on how the structural possibilities at the DP level determine a clear distinction between conservative and non-conservative construals. At this level the fundamental morphological marker is the indefiniteness of the inner determiner, which in turn is constrained by the outer determiner (\S\S\ref{SubSec-Definiteness}). A second factor affecting (non-)conservativity at the DP level is the possibility to get multiple non-conservative interpretations when a modifier occurs in the PM DP. The study of this factor sheds light on the role played by contrastive and new information focus in Italian (\S\S\ref{SubSec-Adjectives-Focus}).
+
+Crucially, in order for the conservative vs. non-conservative interpretations to emerge we need to zoom out of the DP internal level, which has been the focus of the description so far, to the clausal level including a predicate. When the clause is considered, two further morpho-syntactic markers come into play, namely the position of the PM DP with respect to the verb and the verb agreement pattern. Nevertheless, for the sake of clarity of presentation, in this section we abstract away from these factors until \S\ref{Sec-Clause}, and focus here on how the two construals are shaped by the determiners choice. For this reason, in this section the PM DPs are placed in the object position of the clause they belong to, since pre-V subject positions generally block non-conservative interpretations, and post-V subjects trigger verb agreement, which will be discussed later (\S\S\ref{Sub-Sec-VerbAgreement}). 
+
+Furthermore, we need to make a preliminary remark on the lexical choices in the
+examples. Certain inner nouns get more easily contrasted with another set than
+others, since the properties they denote are decisively contrastive. These
+nouns include minorities, gender, sexual orientations, nationalities, social
+classes among others. For example, the set of black people easily evokes its
+complement set of non-black people or the set of women evokes its complement
+set of people who are not women, while the same cannot be said for a stage
+level property such as drunk or sleepy, which denote impermanent and nuanced
+properties \ref{semgen1}.\footnote{\label{footnote22}Predicates expressing temporary properties
+and events are called stage level predicates, while predicates expressing more
+permanent properties and characteristics are called individual level predicates \citep{mil74,car77a}. As discussed in
+\S\S\ref{Sub-Sec-VerbAgreement}, the individual vs. stage level distinction of
+the predicate in sentences with a PM DP is also relevant for the conservative
+vs. non-conservative interpretation.} Since this dimension seems tied to the
+lexical semantics and social aspects of language meaning, we will put aside the
+specific mechanisms at play here, assuming that they are not grammatical in
+nature.
+
+\ex. \label{semgen1} \a.[{\bf Semantic generalisation 1}]: In order to get a non-conservative interpretation the lexical semantics of the inner noun must evoke its complement set.
+
+\subsection{(In-)definiteness of the inner noun} \label{SubSec-Definiteness}
+
+In this subsection we describe how the conservative vs. non-conservative interpretation are shaped by the inner and outer determiners patterns in PM DPs. 
+
+ 
+If the whole PM DP has a definite determiner, then its inner noun must include a definite determiner as well or an indefinite determiner modified by a relative clause for both fraction DPs (\S\S\ref{SubSec-fractionsDP}) and percent DPs (\S\S\ref{SubSec-percentDP}); the difference between the two DPs is that the main determiner is obligatory in the case of percentages, but optional in the case of fractions. If we insert this type of measure DP in a clause with a predicate we can evaluate how it affects the interpretation. In this configuration, with definite determiners, the interpretation of the PM phrase is obligatorily conservative, as shown for percent DPs in \ref{basepercent} and for fraction DPs in \ref{basefraction}.
+
+\ex. \ag. Hanno assunto il trenta percento \{dei / *di\} {non vaccinati}. \\
+	  {they have} hired the thirty percent \{{of the} / *of\} unvaccinated \\	
+ \glt `They hired thirty percent of the unvaccinated.'  \label{basepercent}
+\bg.  Hanno assunto i due terzi \{dei / *di\} {non vaccinati}. \\
+ 	  {they have} hired the two thirds \{{of the} / *of\} unvaccinated \\	
+  \glt `They hired two thirds of the unvaccinated.'   \label{basefraction}
+ 
+ 
+When the head of the whole percent DP is an indefinite determiner, the inner noun can either be introduced by a definite determiner, as in \ref{con}, or no (overt) determiner, as in \ref{noncon}. In the former case, the interpretation is again conservative, just like \ref{basepercent}, while in the latter case, a non-conservative reading is forced.
+
+\ex. \a. \textit{Conservative, definite inner noun} \\
+     \gll Hanno assunto un trenta percento dei {non vaccinati}.\\ 
+	      {they have} hired a thirty percent {of the} unvaccinated\\
+	\glt `They hired about thirty percent of the unvaccinated.' 	\label{con} 
+	\b. \textit{Non-conservative, indefinite inner noun} \\
+	 \gll  Hanno assunto un trenta percento di {non vaccinati}.\\
+	     {they have} hired a thirty percent of unvaccinated \\ 
+	\glt `About thirty percent of the people they hired were unvaccinated.' \label{noncon}	
+
+The same pattern is found with fraction DPs. The inner determiner can be definite, as in \ref{con-frac}, or an (overt) inner determiner can be absent, as in \ref{noncon-frac}. In the former case, the interpretation is again conservative, just like \ref{basefraction}, while in the latter case, the non-conservative reading comes about.
+
+\ex. \a. \textit{Conservative, definite inner noun} \\
+    \gll Hanno assunto (un) due terzi dei {non vaccinati}.   \\
+	  {they have} hired (a) two thirds {of the} unvaccinated \\
+	\glt   `They hired (about) two thirds of the unvaccinated.' \label{con-frac} 
+\b. \textit{Non-conservative, indefinite inner noun} \\
+     \gll Hanno assunto (un) due terzi di {non vaccinati}.     \\ 
+	  {they have} hired (a) two thirds of unvaccinated \\
+	\glt   `About two thirds of the people they hired were unvaccinated.' \label{noncon-frac}
+	
+	
+Furthermore, the relevance of the inner noun indefiniteness for non-conservative proportional readings is further supported by the fact that the actual Italian word \textit{proporzione} (`proportion') requires an indefinite inner noun \ref{propdonne} and produces a much degraded outcome when it combines with a definite inner noun \ref{propdidonne}.\footnote{I am grateful to Valentina Bianchi for bringing this fact to my attention.} 
+ 
+\ex. \ag. Che proporzione di donne hanno assunto? \\
+      what proportion of women {they have} hired?  \\
+     \glt   `What proportion of women did they hire?' \label{propdonne}
+	 \bg. ?*Che proporzione delle donne hanno assunto? \\
+      what proportion {of the} women {they have} hired? \\
+     \glt  `What proportion of the women did they hire?'\label{propdidonne}
+	
+	
+To summarise, in order to get a non-conservative interpretation the proportional measure DP must contain an indefinite inner noun and this in turn requires in the default cases that the outer determiner is indefinite or absent, the latter is possible only in the case of fractions. However, there is an exception to the indefiniteness requirement for the outer determiner, namely a context where it is actually definite and the inner determiner is nevertheless indefinite. The generalisation on inner determiners and non-conservative construals remains valid also for this exceptional outer determiner pattern: as long as the inner determiner is absent the non-conservative reading arises.
+
+The exception was illustrated in \ref{perdefmass} and repeated in \ref{perdefmass1}. Existential sentences involving percent structures with a mass inner noun (\textit{zucchero}) allow the main DP to be definite and the mass inner noun to be indefinite \ref{perdefmass1}. As shown by the translation, the configuration produces a non-conservative interpretation. The parallel construction with a fraction introduced in \ref{fracdefmass} and repeated in \ref{fracdefmass1} does not constitute an exception to the DP determiners generalisation, in fact when the inner noun is indefinite the main DP determiner must be dropped or must be an indefinite, just like in \ref{noncon-frac}.
+
+	\ex. \ag. In questa marmellata c'\`{e} il dieci percento di zucchero. \\ 
+	      in this jam {there is} the ten percent of sugar \\ 
+		\glt  `Of all the ingredients in this jam ten percent is sugar.' \label{perdefmass1}
+		\bg. In questa marmellata ci sono (*i / un) due quinti di zucchero. \\ 
+	      in this jam there are (the$_{PL}$ / a) two fifths of sugar \\ 
+		 \glt `Of all the ingredients in this jam (about) two fifths are sugar.' \label{fracdefmass1} 
+		 
+Note that these exceptions cannot be analysed as examples where the inner noun gets a kind/generic interpretation, as in that case we expect it to behave as a definite of semantic type $<e>$ and give rise to a conservative construal \ref{prozent4} (see footnote \ref{novanta}).
+
+\exg. Il novanta percento di italiani si sono vaccinati. \\
+      the ninety percent of Italians self are vaccinated \\
+      \glt `Ninety percent of the Italians got vaccinated.'  \label{prozent4}\rcommentg{\textit{Conservative}}
+
+
+
+Modulo this exception which we leave for further research, we reach the following two descriptive morpho-syntactic generalisations.\footnote{When we look will at complex sentences in \S\ref{Sec-complex} a second exception to \ref{gen2} will emerge.}
+
+
+\ex. \label{gen1} \a.[{\bf Morpho-syntactic generalisation 1}]: In order to get a non-conservative interpretation the PM DP must contain an indefinite inner noun.
+
+\ex. \label{gen2} \a.[{\bf Morpho-syntactic generalisation 2}]: In order to get a non-conservative interpretation the outer determiner of the PM DP must be indefinite.
+
+
+\subsection{Adjectives and contrastive focus} \label{SubSec-Adjectives-Focus}
+
+Another factor affecting (non-)conservativity at the DP level emerges when we
+consider DPs with modifiers, namely the presence of multiple non-conservative
+construals. \citealt[ex.82]{pas22}, reported in \ref{drei}, note this phenomenon
+for German and claim that the two different interpretations, shown in the free
+translations, actually correspond to different accent patterns marking a
+particular contrastive focus structure that deviates from the default accent
+pattern. The account of non-conservativity proposed by S\&co crucially builds
+on this observation and on the analysis of contrastive focalisation
+\citep{roo85}.
+
+\ex. \label{drei}\ag. Dreißig Prozent [westfälische Studierende]$_{FOC}$ arbeiten hier. \\
+          thirty percent [Westphalian$_{NOM}$ students$_{NOM}$]$_{FOC}$ work here \\
+		  \glt ‘Thirty percent of the workers here are Westphalian students.’
+     \b. Dreißig Prozent [westfälische]$_{FOC}$ Studierende arbeiten hier. \\
+	     thirty percent [Westphalian$_{NOM}$]$_{FOC}$ students$_{NOM}$ work here
+		 \glt ‘Thirty percent of the student workers here are Westphalian.’
+
+
+
+
+In Italian, contrary to German, the marking of the complex DP part which is contrasted can be obtained in-situ only through an explicit preceding question or through an explicit continuation (called \textit{tag}), while a peculiar accent pattern is not sufficient \ref{tag}.\footnote{Thanks to Silvio Cruschina for his comments on this phenomenon.}
+
+
+\exg. Hanno assunto un dieci percento di [virologi italiani]$_{FOC}$, non infermieri russi.\\ 
+{they have} hired a ten percent of [virologists Italian]$_{FOC}$, not nurses russian \\
+	\glt   `About ten percent of the professionals they hired were Italian virologists.' \label{tag}	
+
+\citet{riz97} observes that \textit{focalisation} (fronting of a focus) is  available for contrastive focus in Italian, and notes that there is another kind of focus which is not fronted (left \textit{in situ}, and indicated by stress) and which may or may not be contrastive. Unfortunately, we cannot use the Italian focus fronting possibility to test the role of focus with respect to conservativity, because the fronting itself or the obligatory insertion of \textit{ne} when an \textit{of}-phrase is fronted reinstate a conservative interpretation as illustrated by the free translation of \ref{fronted}.\footnote{For an in depth analysis of Italian \textit{ne} and its interpretive contribution see \citet{fal16, fal23}.}
+
+\exg. [Di virologi italiani]$_{FOC}$ ne hanno assunti un dieci percento, (non di infermieri russi).\\
+	 [of virologists Italian]$_{FOC}$ ones {they have} hired a ten percent, (not of nurses Russian)\\
+	\glt   `They hired about ten percent of the Italian virologists.'  \label{fronted}
+
+ 
+Non-conservative measure DPs with an indefinite inner noun and an adjective show three different interpretations depending on the continuation tag. It can contrast either the entire inner noun \ref{focall}, or solely the adjective \ref{focadj}, or solely the noun without the adjective \ref{focnoun}.
+
+\ex. \label{FOC} \ag. \{Un dieci percento / (Un) due terzi\} di [virologi italiani]$_{FOC}$ \\ 
+          \{a ten percent    /     (a) two thirds\} of [virologists Italian]$_{FOC}$ \\ \label{focall}
+     \bg. \{Un dieci percento / (Un) due terzi\} di [virologists [italiani]$_{FOC}$] \\
+	      \{a ten percent / (a) two thirds\} of [virologists [Italian]$_{FOC}$]  \\ \label{focadj}
+	 \cg. \{Un dieci percento / (Un) due terzi\} di [[virologi]$_{FOC}$ italiani] \\
+	      \{a ten percent / (a) two thirds\} of [[virologists]$_{FOC}$ Italian]  \\ \label{focnoun}
+
+		  
+		  
+In the paradigm presented in \S\S\ref{SubSec-Definiteness} we were dealing with two sets, one evoked by the inner noun inside the PM DPs and one evoked by the predicate of the clause, these two sets lead to a single non-conservative interpretation. Instead, in the paradigm we are looking at in this subsection, four sets are involved. We have the set evoked by the predicate of the clause, and three sets evoked by the modified inner noun: the set denoted by the entire inner noun including the adjective, the set denoted by the adjective alone and the set denoted by the inner noun alone. Each of these sets can give rise to a different non-conservative interpretation and be interpreted as the predicate of the PM instead of its restriction. 
+
+If we insert the three percentage DPs introduced in \ref{FOC} as objects of a clause, we obtain the three interpretations in the free translations in \ref{virologitaliani}. They are all non-conservative but the complement set at stake changes according to focus placement: so in the example in \ref{percdonne} the set of Italian virologists is contrasted with the set of all the professionals who are not Italian virologists; in \ref{percitaliane} it is contrasted with the set of virologists who are of other nationalities; finally, in \ref{percivirologi} it is contrasted with the set of other Italian professionals.\footnote{In \ref{percdonne} and \ref{percivirologi} the lexical choice of virologists and nurses restricts the general set of \textit{people hired} to \textit{(healthcare) professionals hired}.}
+
+\ex. \label{virologitaliani} \ag.  Hanno assunto un dieci percento di [virologi italiani]$_{FOC}$, non infermieri russi. \\
+	  {they have} hired a ten percent of [virologists Italian]$_{FOC}$, not nurses russian \\
+	\glt   `About ten percent of the professionals they hired were Italian virologists.' \label{percdonne}		
+\bg. Hanno assunto un dieci percento di [virologi [italiani]$_{FOC}$], non virologi russi. \\ 
+	  {they have} hired a ten percent of [virologists [Italian]$_{FOC}$], not virologists russian \\
+	\glt   `About ten percent of the virologists they hired were Italian.'  \label{percitaliane}	
+\cg. Hanno assunto un dieci percento di [[virologi]$_{FOC}$ italiani], non infermieri italiani. \\ 
+	  {they have} hired a ten percent of [[virologists]$_{FOC}$ Italian], not nurses Italian \\
+	\glt   `About ten percent of the Italian professionals they hired were virologists.'  \label{percivirologi}
+	
+The same pattern is found if we replace the three percent DPs with the three fraction DPs introduced in \ref{FOC}. 
+
+	
+We conclude that contrastive focus is orthogonal to non-conservativity: it certainly interacts with it modifying the interpretations, but it is not necessary to obtain non-conservative construals in Italian. Indeed, all the examples seen in the previous sections do not involve contrastive focus since they lack an explicit antecedent question or subsequent tag.  
+
+The same pattern we reported here for inner nouns modified by adjectives applies also to more complex inner noun modifiers such a relative clauses. However, before approaching systematically the topic of focus with relative clause modifiers (\S\S\ref{SubSec-RelFocus}) we need to study verb agreement patterns and how they affect the (non-)conservative construal in main clauses \S\S\ref{Sub-Sec-VerbAgreement} and in complex sentences with subordinate clauses \S\S\ref{SubSec-verb-sub}. 
+
+
+\section{The simple clause and (non-)conservative interpretations}\label{Sec-Clause}
+
+We can now zoom out of the DP level and look at PM DPs in the context of the
+simple clause. Two factors affecting (non-)conservativity emerge at this level,
+the PM DP position, related to new information focus
+\S\S\ref{Sub-Sec-Position}, and the role of verb agreement
+\S\S\ref{Sub-Sec-VerbAgreement}.
+
+
+Since we are now introducing clauses, we need to preliminary bring up the relevance of the individual-level vs. stage-level distinction of intransitive predicates for the conservative vs. non-conservative distinction (already mentioned in footnote \ref{footnote22}). The terms individual-level and stage-level predicate were coined by \citet{car77a} (following the proposal of \citealt{mil74}) in order to make a distinction between predicates that apply respectively to an individual or entity for the entire duration or just to a stage of its existence. The individual vs. stage level distinction is fluid, but it is relevant for a number of grammatical phenomena. For example, individual-level predicates are not compatible with locative and temporal expressions, with existential constructions and with (unstressed) weak subjects; instead, stage-level predicates, occur with (overt or covert) locatives and temporal expressions, appear in existential constructions, and require weak subjects. 
+
+We propose to add to these phenomena also the conservative vs. non-conservative distinction.\footnote{This observation is very similar to \citeauthor{geh23}'s \citeyearpar[p.26]{geh23} remark on intransitive verbs and non-conservativity. The authors show that  in Slavic and in German only existential predicates and predicates which can be construed as typical ways of existing at a location give rise to non-conservative construals (see also the German example \ref{prozent1} vs. \ref{prozent2}).} Sentences with individual level predicates and a PM DP with indefinite inner and outer determiners are quite marginal. Insofar as they can be accepted, they give rise to the
+conservative construal, irrespective of the PM DP form and the verb agreement pattern. In \ref{indiv} the predicate \textit{be intelligent} denotes an individual level property: being intelligent is an inherent property which normally does not change and thus is incompatible with a locative and temporal restriction. Intuitively, individual level properties being inherent to the inner noun \textit{women} have a strong tie to it and for this reason cannot be easily applied to the complement set of the inner noun, even if the structural requirements are respected. Furthermore, the individual-level predicate lacks a location argument \citep[p.136]{kra95} which delimits the set of individuals who are intelligent. Instead, stage level predicates (\textit{be present} in \ref{stage}) could be easily applied to the complement set of the inner noun, thus facilitating the non-conservative interpretation when the structural requirements are respected. Furthermore, the stage level predicate does have a location argument \citep[p.136]{kra95} enabling the definition of the set of individuals who \textit{are present}, which acts as the restriction of the proportion in the non-conservative construal. Actually, sentences with intransitive verbs get a non-conservative construal when this location argument is overtly realised.
+
+\ex. \a. \textit{Individual level predicate, conservative} \\
+\gll  ??\`{E} intelligente un sessanta percento di donne. \\
+      is intelligent a sixty percent of women \\
+\glt `Sixty percent of the women are intelligent.'\label{indiv} 
+\b. \textit{Stage level predicate, non-conservative} \\
+\gll  Qui \`{e} presente un sessanta percento di donne. \\
+      here is present a sixty percent of women \\
+\glt `Of all the people here sixty percent are women.'  \label{stage}
+
+Therefore, we can add the semantic generalisation in \ref{semgen2}, to the ones we already reached in the previous sections.
+
+\ex. \label{semgen2} \a.[{\bf Semantic generalisation 2}]: In order to get a non-conservative interpretation intransitive predicates must denote a stage level property.
+
+Since this distinction belongs to the lexical semantics of the predicates, we do not discuss it further here. However, in order to study the role of verb agreement patterns in producing conservative and non-conservative construals, we have to avoid individual-level intransitive predicates.
+
+\subsection{Proportions position and new information focus} \label{Sub-Sec-Position}
+
+Contrary to contrastive focus (\S\S\ref{SubSec-Adjectives-Focus}), new information or wide focus is a crucial factor in Italian. In fact, non-conservative construals are not attested in Italian when the DP is in pre-verbal subject position, which has a givenness/topic nature \citep{cha76}. Contrary to \citet[ex.44]{ahn17}, according to the pool of 6 native speakers, in Italian only post-V indefinite percentages and indefinite fractions with an indefinite inner noun  get a non-conservative construal, while sentences with the same percent DPs placed in pre-V position are marginally acceptable  with neutral intonation and get a conservative construal \ref{pre-postV}.
+ 
+\ex. \label{pre-postV} \ag. ?Un sessanta percento di donne ha acquistato il libro. \\
+      a sixty percent of women has bought the book\\
+   \glt    `About sixty percent of the women bought the book.' \label{non-cons-postv}  \rcommentg{\textit{Conservative}}
+   \bg.  ?Un due terzi di donne ha acquistato il libro. \\
+         a two thirds of women has bought the book\\
+      \glt    `About two thirds of the women bought the book.' \label{non-cons-postv-fra} \rcommentg{\textit{Conservative}}
+
+
+
+In this subsection we reached a semantic/pragmatic generalisation concerning new information focus \ref{semgen3}, related to a syntactic difference in the word order in the sentence \ref{gen3}. 
+
+\ex. \label{semgen3} \a.[{\bf Semantic generalisation 3}]: In order to get a non conservative interpretation the PM DP must be in a new information position, as opposed to given information position. 
+
+\ex. \label{gen3} \a.[{\bf Morpho-syntactic generalisation 3}]:  In order to get a non-conservative interpretation the PM DP must be in a post-V position. 
+
+
+\subsection{Proportions and verb agreement} \label{Sub-Sec-VerbAgreement}
+
+Italian adjectives normally agree both in number and in gender with the preceding noun. Therefore, when adjectives occur within a complex DP, such as a measure phrase, they should agree with the adjacent name they modify. In the case of measure phrases this means that adjectives must agree with the inner noun as we saw throughout the paradigms in \S\S\ref{SubSec-Adjectives-Focus}. Instead, agreement of an individual level adjective with the measure DP head is ungrammatical, as illustrated by the sharp ungrammaticality of the examples in \ref{adjagree}, involving an absolute measure, a percentage and a fraction respectively.\footnote{\label{adjdiscussion}DPs such as \ref{Available} are marginally possible. \ref{Available} involves a past participle adjective denoting a stage-level property and agreeing with an obligatory definite outer D. These examples behave like a short version of a relative clause attached to the PM DP \ref{Availableb}. Relative clauses are the topic of the next section \S\ref{Sec-complex}.
+
+\ex. \ag. ?[[il dieci percento] di donne] assunto \\ 
+          [[the ten percent]$_{M.SG}$  of women$_{F.PL}$]] hired$_{M.SG}$  \label{Available} \\
+       \bg. il dieci percento di donne che è stato assunto \\  
+	      [[the ten percent]$_{M.SG}$  of women$_{F.PL}$]] that [is been  hired]$_{M.SG}$ \label{Availableb} \\
+
+}
+
+
+\ex. \label{adjagree}  
+    \ag. *[un centinaio] di [donne italiano] \\ 
+           [about {a hundred}]$_{M.SG}$  of [women$_{F.PL}$ Italian$_{M.SG}$] \\ 
+    \bg. *[un dieci percento]  di [donne italiano$_{M.SG}$] \\ 
+           [about ten percent]$_{M.SG}$  of [women$_{F.PL}$ Italian$_{M.SG}$] \\ 
+    \cg. *[due terzi] di [donne italiani] \\
+	       [two thirds]$_{M.PL}$ of [women$_{F.PL}$ Italian$_{M.PL}$] \\
+ 
+
+Contrary to adjectives, in colloquial Italian verbs with complex subject DPs, such as PM DPs, can easily agree either with the entire DP or with the inner NP. In order to abstract away from verb agreement, so far we used mainly object DPs, which do not trigger agreement, and limited the examples with post-V subject PM DPs, which do trigger agreement on the preceding verb.
+
+The agreement patterns are introduced with a passive construction built with a participle presenting both number and gender agreement in Italian, taking care to put the DP in post-V position. This possibility is attested in Italian as a \textit{pro}-drop language allowing the subject of passive and unaccusative verbs to remain in post-verbal position, where it is base-generated. Therefore, these verbs permit to explore the full spectrum of the agreement paradigm with the appropriate measure DP choice. Of course, it is not necessary to see both number and gender agreement: any mismatch is sufficient to discriminate which is the agreement trigger. 
+
+In the following paradigms we illustrate the space of possibilities allowed by
+the agreements patterns with passive verbs with post-verbal PM DPs, without
+describing how these affect the conservative vs. non-conservative
+interpretations for of the clauses at this introductory stage. For this
+reason, these examples are glossed, but the free translation is not provided.
+In percent DPs which are always masculine singular in Italian but can feature a countable plural inner noun, it is possible to observe a mismatch in both number and gender using a plural feminine inner noun (\ref{relagreesub} vs. \ref{relagreeDP}, where \textit{pc} stands for \textit{percento} `percent').\footnote{In the examples with
+percentages, we use an indefinite percentage DP in order to allow the
+alternation of definite and indefinite inner noun.} In fraction DPs it is
+possible to obtain the same agreement pattern as in percentages when the
+fraction is singular and denotes one part and the inner noun is plural (\textit{un terzo di/delle donne} `a third of/of the women').
+Instead, when the fraction is plural a number and gender agreement contrast can
+be obtained with a singular mass feminine inner noun (\ref{fracagreesub} vs.
+\ref{fracagreeDP}).\footnote{Also in English pseudo-partitive structures an alternation between singular and plural agreement with the finite verb exists as illustrated by \ref{singplu} with an absolute measure phrase (\citealt[ex.2b]{man19}).
+
+\ex. A group of senators \{is/are\} voting against the proposal. \label{singplu}
+
+}
+
+\ex.  \ag. [Sono state assunte] [[un dieci pc] \{??di/delle\} donne]. \\
+	       [are been hired]$_{F.PL}$ [[a ten pc]$_{M.SG}$ \{of/{of the}\} women$_{F.PL}$]$_{M.SG}$ \\ \label{relagreesub}
+      \bg. [\`{E} stato assunto] [[un dieci pc] \{di/delle\} donne]. \\
+ 	       [is been hired]$_{M.SG}$ [a ten pc]$_{M.SG}$ \{of/{of the}\} women$_{F.PL}$]$_{M.SG}$ \\ \label{relagreeDP}
+	 	\cg. [\`{E} stata venduta] [[due terzi] \{??di/della\} birra]. \\
+	      [is been sold]$_{F.SG}$ [[two thirds]$_{M.PL}$ \{of/{of the}\} beer$_{F.SG}$]$_{M.PL}$ \\  \label{fracagreesub}
+      \dg.  [Sono stati venduti] [due terzi \{di/della\} birra]. \\
+           [are been sold]$_{M.PL}$ [[two thirds]$_{M.PL}$ \{of/{of the}\} beer$_{F.SG}$]$_{M.PL}$ \\ \label{fracagreeDP}
+
+There are quite a few psycholinguistic studies on agreement processing looking at verb agreement with complex subject DPs  (\textit{proximity concord}, for Italian starting from \citealt{vig95}). These studies generally consider all the instances of agreement with the inner noun processing errors. The majority of the examples these works discuss involve, indeed, processing errors, however, we maintain that in the structures we are studying here, namely PM DPs, there is an actual grammatical optionality with two different underlying structures (and corollary interpretation) depending on the verb agreement pattern \citep[\S1]{man19}. The interpretive import of this variation can be fully appreciated by looking at how the conservative vs. non-conservative interpretations are affected by the two agreement options.
+
+
+
+We can now test number \ref{Num} and gender \ref{Gen} agreement in isolation with the appropriate inner noun choice and study how they shape the conservative and non-conservative interpretations. When a conservative PM DP (with a definite inner D) is the subject agreement is irrelevant for conservativity, since both number agreement patterns lead to conservative construals due to the presence of the definite inner D \ref{base}-\ref{connn} (\textit{of the blacks}, \textit{of the beer} see \ref{gen1}). If a non-conservative PM DP (with an indefinite inner noun and outer D) is the subject, agreement becomes relevant for the conservative vs. non-conservative distinction: agreement with the outer D (\ref{lavnoncon}-\ref{agreenoncon}) actuates a non-conservative construal, while agreement with the inner noun, to the extent it is acceptable, triggers a conservative construal (\ref{lavcon}-\ref{agreecon}): the indefinite inner noun behaves like a definite with respect to conservativity and  \ref{lavcon}-\ref{agreecon} are parallel to \ref{base}-\ref{connn}.\footnote{In \ref{Gen} with the singular mass noun \text{beer}, we add an adjective modifying the indefinite inner noun \textit{German}  in order to facilitate the access to the complement set of the inner noun, necessary for the non-conservative construal (see discussion in \S\ref{Sec-DP}).}
+	
+\ex. \label{Num} \ag. \{È stato assunto / Sono stati assunti\}  \{il / un\} trenta percento dei neri. \\
+	   \{[is been hired]$_{M.SG}$ / [are been hired]$_{M.PL}$\}  \{the / a\} thirty percent {of the} black$_{M.PL}$]$_{M.SG}$  \\ 
+	  \glt 	`(About) thirty percent of the black people were hired.'  \label{base} 
+\bg. È stato assunto un trenta percento di neri. \\
+		  [is been hired]$_{M.SG}$ [a thirty percent of black$_{M.PL}$]$_{M.SG}$.  \\
+	\glt `About thirty percent of the people hired  are black people.'    \label{lavnoncon} 
+  \cg. ??Sono stati assunti un trenta percento di neri. \\
+		[are been hired]$_{M.PL}$ [a thirty percent of black$_{M.PL}$]$_{M.SG}$ \\ 	
+		 \glt `About thirty percent of the black people were hired.' \label{lavcon}	
+
+\ex. \label{Gen} \ag.  \{È stata venduta / È stato venduto\} \{il / un\} trenta percento della birra tedesca. \\
+      \{[is been sold]$_{F.SG}$ /  [is been consumed]$_{M.SG}$\}  [\{the / a\} thirty percent {of the} [beer German]$_{F.SG}$]$_{M.SG}$ \\
+	\glt   `(About) thirty percent of the German beer was sold.'  \label{connn}
+	\bg.  \`E stato venduto un trenta percento di birra tedesca. \\
+	    [is been sold]$_{M.SG}$ [a  thirty percent of [beer German]$_{F.SG}$]$_{M.SG}$\\	 
+	\glt   `About thirty percent of all the beer sold was German beer.'  \label{agreenoncon}
+\cg. ??\`E stata venduta un trenta percento di birra tedesca.  \\
+       [is been sold]$_{F.SG}$ [a thirty percent of [beer German]$_{F.SG}$]$_{M.SG}$ \\
+	\glt   `About thirty percent of the German beer was sold.' \label{agreecon} 
+	
+The same pattern we saw for percentages applies to fraction DPs
+\ref{fracagreesub}-\ref{fracagreeDP}, but we omit the paradigms for the sake of
+brevity.
+
+In conclusion, in this section we have reached the morpho-syntactic generalisation in \ref{gen4}:
+
+\ex. \label{gen4} \a.[{\bf Morpho-syntactic generalisation 4}]: In order to get a non-conservative interpretation the main verb cannot agree with the inner noun, otherwise it behaves as a definite.  
+
+\section{Complex sentences and (non-)conservative interpretations}\label{Sec-complex}
+
+We can now zoom out of the simple clause to look at complex sentences including a subordinate relative clause attached to the PM DP. These sentences pose two challenges to the descriptive generalisations reached so far. Firstly, when a PM DP is the head of a relative clause its inner determiner can be indefinite while the outer determiner must be definite. Secondly, the generalisation concerning the ban on a non-conservative interpretation for pre-V PM DPs \ref{gen3} does not hold in subordinate clauses. 
+
+When a relative clause is attached to a PM DP with an indefinite inner noun and verb agreement with the outer D (and incompatible with the inner noun), the outer D must be definite so that the relative clause can attach to the DP. This requirement applies in the same way to percentages \ref{relperc} and to fractions \ref{relfrac}.\footnote{In the examples in this section we omit the gender subscript since it is not morphologically marked on the verb. In \ref{relperc} the predicate of the main clause (\textit{fired}) restricts \textit{the people who had Covid} to \textit{the employees who had Covid}. In \ref{relfrac} with the singular mass noun \text{staff}, we add a individual level adjective modifying the indefinite inner noun \textit{female} in order to facilitate the access to the complement set of the inner noun. This  requirement for getting the non-conservative construal is valid in relative clauses like in simple main clauses (Semantic generalisation 1 \ref{semgen1}).} As shown by the translations, both these constructions give rise to a non-conservative construal confined within the relative clause itself.\footnote{If the predicate of the relative clause denotes an individual level property the non-conservative construal is blocked \ref{idivid} vs. \ref{stagel}, like in simple clauses \ref{indiv} vs. \ref{stage} (Semantic generalisation 2 \ref{semgen2})
+
+\ex. \ag. ??La ditta ha licenziato il trenta percento di donne che è italiano. \\ 
+           the company has fired [the thirty percent of women$_{PL}$]$_{SG}$              that is$_{SG}$ Italian  \\
+         \glt `The company has fired thirty percent of the Italian women' \label{idivid}
+        \bg. La ditta ha licenziato il trenta percento di donne che era       		presente alla manifestazione. \\ 
+	the company has fired [the thirty percent of women$_{PL}$]$_{SG}$ that 		was$_{SG}$ present {at the} demonstration \\
+	\glt `Thirty percent of the people attending the demonstration were women 	and the company fired those women. ' \label{stagel}
+		
+		}
+
+
+\ex. \label{order}  \ag. La ditta ha licenziato il trenta percento di donne che ha avuto il Covid.\\ 
+	  the company has fired [the thirty percent of women$_{PL}$]$_{SG}$ that has$_{SG}$ had the Covid\\
+	\glt  `Thirty percent of the employees who had Covid are women and the company fired those women.' \label{relperc} 
+\bg. La ditta ha licenziato i due terzi di personale femminile che hanno avuto il Covid. \\
+   	the company has fired [the two thirds of [staff female]$_{SG}$]$_{PL}$ that have$_{PL}$ had the Covid \\ 
+   	\glt `Two thirds of the staff who had Covid are female staff and the company fired that female staff.'
+   \label{relfrac} 
+
+These same sentences are strongly degraded when the definite article is omitted and the verb agreement patterns in the relative clause are incompatible with the inner noun (but they become marginally acceptable if the verb in the relative clause agrees with the inner noun see \S\S\ref{SubSec-verb-sub}). 
+
+\ex. \ag. *?La ditta ha licenziato un trenta percento di donne che ha avuto il Covid.\\ 
+	  the company has hired a thirty percent of women that has$_{SG}$ had the Covid\\
+\bg. *?La ditta ha licenziato due terzi di personale femminile che hanno avuto il Covid. \\
+	  the company has fired [two thirds of [staff female]$_{SG}$]$_{PL}$ that have$_{PL}$ had the Covid.\\ 
+	  
+	  
+In conclusion, the Morpho-syntactic generalisation 2 \ref{gen2} must be modified to accomodate the facts concerning subordinate clauses \ref{gen2rev}.
+
+\ex. \label{gen2rev} \a.[{\bf Morpho-syntactic generalisation 2 revised}]: In order to get a non-conservative interpretation the outer determiner of the PM DP must be indefinite, unless it is the head of a relative clause.
+
+The examples in \ref{order} involve a subject relative clauses, but the PM DP is in object position of the main clause, therefore they could still be compatible with the morpho-syntactic generalisation 3 \ref{gen3}. However, it is possible to place the PM DP in the subject position of the main clause and get a non-conservative outcome \ref{subj-order}. 
+
+\ex. \label{subj-order} \ag. Il trenta percento di donne che ha avuto il Covid è stato licenziato dalla ditta.\\ 
+	 [the thirty percent of women$_{PL}$]$_{SG}$ that has$_{SG}$ had the Covid is been fired {by the} company\\
+	\glt  `Thirty percent of the employees who had Covid are women and those women were hired by the company.'  
+\bg. I due terzi di personale femminile che hanno avuto il Covid sono stati licenziati dalla ditta. \\
+   	 [the two thirds of [staff female]$_{SG}$]$_{PL}$ that have$_{PL}$ had the Covid are been fired {by the} company \\ 
+   	\glt `Two thirds of the staff who had Covid are female staff and the company fired that staff.' 
+  
+  
+Therefore, the morpho-syntactic generalisation 5 \ref{gen5} must be added to the generalisation 3 \ref{gen3} to accommodate the facts concerning subordinate clauses. Note that \ref{gen5} straightforwardly follows from the semantic generalisation 2 on information structure \ref{semgen2}: only the subject of main clauses is given information, not that of subordinate clauses. 
+
+\ex. \label{gen5} \a.[{\bf Morpho-syntactic generalisation 5}]:  In order to get a non-conservative construal in subordinate clauses the PM DP position does not matter. 
+
+We can now look at the effects of verb agreement \S\S\ref{SubSec-verb-sub} and contrastive Focus \S\S\ref{SubSec-RelFocus} in complex sentences with a PM DP heading a relative clause. 
+
+\subsection{Verb agreement and (non-)conservativity with relative clauses} \label{SubSec-verb-sub}
+	
+In a percent DP with a definite \ref{deglistudenti} or indefinite \ref{distudenti} plural count inner noun and a relative clause with plural agreement on the verb, the relative clause attaches to and restricts only the inner nouns \textit{\{delle / di\} donne}. As indicated by the free translations, the set of women who have passed the oral exam is a subset of the set of women who have passed the written exam, including only ten percent of those. 
+
+\ex. \a. \textit{Definite inner noun, plural agreement}	 \\  
+    \gll Il sessanta percento delle donne che hanno superato l'esame scritto hanno superato anche l'orale. \\ 
+       [the sixty percent {of the} women$_{PL}$]$_{SG}$ who have$_{PL}$ passed {the exam} written  have passed also {the oral} \\
+	  \glt `Sixty percent of the women who have passed the written exam have passed also the oral exam.' \label{deglistudenti} 
+\b. \textit{Indefinite inner noun, plural agreement}	 \\    
+     \gll ??Il sessanta percento di donne che hanno superato l'esame scritto hanno superato anche l'orale. \\ 
+      [the sixty percent of women$_{PL}$]$_{SG}$ who have$_{PL}$ passed {the exam} written have passed also {the oral} \\
+	  \glt `Sixty percent of the women who have passed the written exam have passed also the oral exam.' \label{distudenti} 
+	 
+In a percent DP with a definite \ref{deglistudentisg} or indefinite \ref{distudentisg} plural count inner noun and a relative clause with singular agreement on the  verb, the relative clause attaches to and restricts the entire DP \textit{il sessanta percento \{di / delle\} donne}. As indicated by the free translations, the set of women who have passed the written exam is the same set of women who have passed also the oral exam. Therefore the sentences \ref{deglistudentisg} and \ref{distudentisg} denote a bigger set than \ref{deglistudenti} and \ref{distudenti}. Interestingly, \ref{distudentisg} with the indefinite inner noun has a non-conservative interpretation as indicated by the free translation: the restriction is the set of people who sat the exam, which can be accessed from the relative clause, and not the set of women.\footnote{As we saw in \ref{perdefmass} in \S\S\ref{SubSec-percentDP} percentages with a mass inner noun are an exception to the blocking effect of an indefinite inner noun: the clause in \ref{nonrel} with a definite article introducing the PM DP is grammatical and non-conservative, without the presence of a relative clause. Of course, the same pattern persists also in the presence of a relative clause \ref{relclausemass}.  
+
+\exg. Le scorte alimentari contengono \{il / un\} dieci percento di riso.  \\
+      the reserves food contain \{the / a\} ten percent of rice \\
+	\glt   `\{Ten / about ten\} percent of the entire food reserves is rice.'  \label{nonrel}
+
+\exg. \{Il / Un\} dieci percento di riso che fa parte delle scorte alimentari \ldots \\
+      \{the / about\} ten percent of rice that make part {of the} reserves food \\
+	\glt  `\{Ten / about ten\} percent of the food reserves is composed of rice and \ldots'  (DP attachment) \\
+	`??\{Ten / about ten\}  percent of the rice is part of the food reserves and \ldots' (inner noun attachment)\label{relclausemass}
+	
+	It would be interesting to look at the  patterns of verb agreement and relative clause attachment, identified here for PM constructions, in the context of partitive constructions to study how \citesax{bar98} anti-uniqueness effect comes about.
+	}
+	  
+
+\ex. \a. \textit{Definite inner noun, singular agreement}	 \\    
+   \gll ?Il sessanta percento delle donne che ha superato l'esame scritto ha superato anche l'orale. \\ 
+      [the sixty percent {of the} women$_{PL}$]$_{SG}$ who has$_{SG}$ passed {the exam} written has passed also {the oral} \\
+	  \glt `Sixty percent of all the women has passed the written exam and those students have passed also the oral exam.' \label{deglistudentisg} 
+\b. \textit{Indefinite inner noun, singular agreement}	  \\  
+\gll Il sessanta percento di donne che ha superato l'esame scritto ha superato anche l'orale. \\ 
+      [the sixty percent of women$_{PL}$]$_{SG}$ who has$_{SG}$ passed {the exam} written has passed also {the oral} \\
+	 \glt `Sixty percent of all the people who passed the written exam were women and those women passed also the oral exam.'\label{distudentisg}
+	 
+
+The same paradigm can be replicated for definite plural fractions with singular mass inner noun, and for definite singular fractions with a plural inner noun. For example \textit{i due terzi di zucchero} (`the two thirds of sugar') and \textit{il terzo di donne} (`the one third of women'). Actually, definite singular fractions with indefinite inner nouns sound unnatural in Italian, since they favour a sub-atomic interpretation. For brevity reasons, we omit the paradigm here. 
+
+
+We conclude that relative clause verb agreement with the inner noun makes the inner noun itself behave as a definite, thus allowing it to occur in the context of a definite outer determiner, exactly as in main clauses \ref{Sub-Sec-VerbAgreement}. Instead, agreement with the entire PM DP allows the relative clause to attach to it when the DP has a definite D: also in this case the outer definite D can occur with an indefinite inner noun, but with a different PM DP structure (see discussion of \ref{structure}) and a non-conservative construal.\footnote{The same distinction is marked in English by the presence (\ref{theofstudents} and \ref{theofthestudents})  or absence (\ref{ofstudents} and \ref{ofthestudents}) of the definite outer D. When there is a definite D the relative clause attaches to the entire DP, whereas when there is not the relative clause probably attaches lower to the definite (\textit{of the women}) or to the indefinite (\textit{of women}) inner noun. English differentiates between singular and plural in past participles found with present perfect and past perfect, as shown in the examples (\textit{\{has / have\}}). We leave the study of the role of verb agreement in English to future investigations.
+
+\ex. 
+\a.   The ten percent of women who \{has/have\} passed the written exam  \{has/have\} passed also the oral exam. \label{theofstudents} 
+\b.   The ten percent of the women who \{has/have\} passed the written exam  \{has/have\} passed also the oral exam.  \label{theofthestudents} 
+ \c.   Ten percent of women who  \{has/have\} passed the written exam  \{has/have\} passed also the oral exam. \label{ofstudents}   
+\d.    Ten percent of the women who   \{has/have\} passed the written exam  \{has/have\} passed also the oral exam. \label{ofthestudents}
+
+	} In order to include the complex sentences with subordinate clauses, the Morpho-syntactic generalisation 3 \ref{gen4} needs to be enriched with the descriptive generalisation \ref{gen4rev}.
+
+\ex.\label{gen4rev} \a.[{\bf Morpho-syntactic generalisation 4 revised}]: In order to get a non conservative interpretation the main and the subordinate verb must not agree with the inner noun.
+
+\subsection{Relative clauses and contrastive focus: multiple non-conservative interpretations} \label{SubSec-RelFocus}
+
+We can now go back to the final observation of \S\S\ref{SubSec-Adjectives-Focus} concerning the effect of contrastive focus on relative clause modifiers, instead of adjectives. At the same time, uncovering the role of focus on relative clauses adds another level of complication to the agreement patterns just discussed in \S\S\ref{SubSec-verb-sub}. In other words, in this section we look at a sample of complex examples where all the factors in the descriptive generalisations we arrived at, both morpho-syntactic and semantic, come into play and interact with each others.
+
+
+Consider the case of percentages. When the verb agrees with a plural inner noun it behaves de facto as a definite, so that contrastive focus placement on the entire inner noun \ref{entire}, on the relative clause \ref{relclause}, or on the head of the relative clause \ref{head}, does not make any difference on the interpretation (cf. \ref{lavcon}). Of course, this case does not arise with adjectives, as they generally do not exhibit agreement variation (discussion in footnote \ref{adjdiscussion}).\footnote{The examples in the text are comparable to an example with an adjective and a definite inner noun, where contrastive focus (expressed by the tag) on the entire PM DP or any subparts of it cannot lead to different interpretations in terms of conservativity \ref{virinf}.
+
+\exg.  Hanno assunto un dieci percento dei virologi italiani, non \ldots.  \\
+        {they have} hired a ten percent {of the} virologists Italian, not \ldots \\
+         \glt `They have hired about ten percent of the Italian virologists, not \ldots.'  \label{virinf}
+
+		
+}
+
+\ex. \ag. ?Hanno assunto [un/il dieci percento] di [donne che parlano italiano]$_{FOC}$, non di uomini che parlano russo. \\
+     {they have} hired [a/the ten percent]$_{SG}$ of [women$_{PL}$ who speak$_{PL}$ Italian]$_{FOC}$, not of men who speak Russian \\
+     \glt `They hired ten percent of the women who speak Italian, not of the men who speak Russian' \label{entire}
+\bg. ?Hanno assunto [un/il dieci percento di [donne  [che parlano  italiano]$_{FOC}$], non di donne che parlano russo. \\
+     {they have} hired [a/the ten percent]$_{SG}$ of [women$_{PL}$ [who speak$_{PL}$ Italian]$_{FOC}$], not of women who speak Russian \\
+	 \glt `They hired ten percent of the women who speak Italian, not of the women who speak Russian' \label{relclause}\	
+\cg. ?Hanno assunto [un/il dieci percento] di [[donne]$_{FOC}$ che parlano italiano], non di uomini che parlano italiano. \\
+     {they have} hired [a/the ten percent]$_{SG}$             of [[women$_{PL}$]$_{FOC}$ who speak$_{PL}$ Italian], not of men who speak Italian \\
+	 \glt `They hired ten percent of the women who speak Italian, not of the men who speak Italian' \label{head}
+	 
+
+Instead when there is singular agreement with the main percentage DP, we get three different non-conservative interpretations depending on contrastive focus, as it happens in the case of adjectives seen in \S\S\ref{SubSec-Adjectives-Focus} \ref{virologitaliani}. The interpretations are all non-conservative but the complement set at stake changes according to the contrastive focus placement as defined by the continuation tag. Therefore, in the example in \ref{donneitaliane} the set of Italian speaking women is contrasted with the set of all the other candidates, no matter their sex or spoken languages. In \ref{italiano}, where \textit{women} is not contrastively focalised, the set of Italian speaking women is contrasted with the set of female candidates who speak other languages. Finally, in \ref{donne}, the set of Italian speaking women is contrasted with the set of men who speak Italian, since \textit{who speak Italian} is not contrastively focalised.
+
+\ex. \ag. Hanno assunto [il dieci percento] di [donne che parla italiano]$_{FOC}$, non di uomini che parla russo. \\
+      {they have} hired [the ten percent]$_{SG}$ of [women$_{PL}$ who speak$_{SG}$ Italian]$_{FOC}$, not of men who speak Russian \\
+	   \glt `About ten percent of all the candidates are Italian speaking females and they hired those women.' \label{donneitaliane}		
+\bg. Hanno assunto [il dieci percento] di [donne [che parla  italiano]$_{FOC}$], non di donne che parla russo. \\
+     {they have} hired [the ten percent]$_{SG}$ of [women$_{PL}$ [who speak$_{SG}$ Italian]$_{FOC}$], not of women who speak Russian \\
+	  \glt `About ten percent of the female candidates are Italian speakers and they hired those women.' \label{italiano}
+\cg. Hanno assunto [il dieci percento] di [[donne]$_{FOC}$ che parla  italiano], non di uomini che parla italiano. \\
+	      {they have} hired [the ten percent]$_{SG}$ of [[women$_{PL}$]$_{FOC}$ who speak$_{SG}$ Italian], not of men who speak Italian \\
+	  \glt	 `About ten percent of the Italian speaking candidates are women and they hired those women.' \label{donne}
+ 
+	 
+The paradigm for definite percentages can be easily replicated for definite fractions, when an agreement mismatch between the PM DP and its inner noun is present. For space reasons, we omit it here. 
+
+\section{Towards an analysis of Italian proportions} \label{Sec-conclusions}
+
+In the previous sections, we have discussed in detail the eight conditions for the availability of non-conservative readings with proportions in Italian. To conclude, we can now asses how the current theories of proportions fare with respect to the uncovered Italian data and offer a starting point for an analysis.
+
+First of all, we reject a DP-adverbial analysis, discarded also by \citet{pas22}, and mentioned by one of the reviewers. 
+The interpretation of main clause non-conservative examples can be expressed also by a DP-adverbial phrase (as mentioned in footnote \ref{footnote4}), as illustrated by \ref{non-cons-avv-a}. It is therefore natural to explore the idea that the non-conservative examples with an argumental DP could be reduced to these sentences with a DP-adverbial at an abstract level of representation.\footnote{Note also that in cases involving percentages, another adverbial introduced by the preposition \textit{al} (`at') is marginally possible. However, this adverbial
+expresses the probability of the event denoted by the entire sentence, as shown by the translation of \ref{atsixty}.
+
+	\exg. L'universit\`{a} ha assunto al sessanta percento donne. \\
+     {the university} has hired {at the} sixty percent women  \\ 
+  \glt `There is a sixty percent probability that the university has hired women.'  \label{atsixty}
+  
+  }
+
+\ex. \label{non-cons-avv-a} \ag. L'universit\`{a} ha assunto per il sessanta percento donne. \\
+     {the university} has hired for the sixty percent women  \\ 
+  \glt `Of the people the university has hired sixty percent are women.' 
+  \bg. L'universit\`{a} ha assunto per un terzo donne. \\
+       {the university} has hired for one third women \\
+    \glt `Of the people the university has hired one third is women.' 
+
+Theoretically, it remains mysterious how such an exotic transformation from an argumental DP to an adverbial could take place. Empirically, sentences involving a relative clause provide an argument to dismiss this line of analysis, since it does not hold: a DP-adverbial version of \ref{distudentisg} and the parallel example with fractions cannot be constructed \ref{non-cons-avv-n}, no matter where the adverb is placed in the sentence.\footnote{Since the sentences are uninterpretable a free translation is not provided.}
+
+\ex. \label{non-cons-avv-n}	   \ag. \# Per il sessanta percento le donne che hanno superato l'esame scritto hanno superato l'esame orale. \\
+      for the sixty percent the women who have passed {the exam} written have passed {the exame} oral  \\ 
+	   \bg. \# Per i due terzi le donne che hanno superato l'esame scritto hanno superato l'esame orale. \\
+       for the sixty percent the women who have passed {the exam} written have passed {the exame} oral \\ 
+
+		 
+		 		  
+S\&co propose the most complete theory of non-conservative proportions for German. Their analysis can be extended to explain some of the Italian data when coupled with a few additional proposals, as we will now show. S\&co propose that the distinction between conservative genitive (\ref{prozent1}, repeated in \ref{gencons}) and non-conservative juxtaposed structures (\ref{prozent2}, repeated in \ref{juxcons}) comes from a structural distinction. The inner noun of genitive structures is the complement to the measure noun, while the inner noun of juxtaposed structures is adjoined to the measure noun, with the latter undergoing QR outside of the DP to a position along the clausal spine \ref{structure} (\citealt[ex.40]{pas22} adapted). 
+
+\ex. \a. \textit{Genitive, conservative} \\
+        \gll  Dreißig Prozent der Studierenden arbeiten. \\ 
+          thirty percent the$_{GEN}$ students$_{GEN}$ work \\
+        \glt  `Thirty percent of the students work.'  \label{gencons}
+     \b.  \textit{Nominative, non-conservative} \\
+	    \gll Dreißig Prozent [Studierende]$_{FOC}$ arbeiten hier. \\
+          thirty percent [students$_{NOM}$]$_{FOC}$ work here \\
+        \glt `Thirty percent of the workers here are students.' \label{juxcons}
+
+\ex. \label{structure}
+\begin{minipage}[t]{0.5\linewidth}
+ \noindent a. \textit{Genitive structure} \\ \\
+     \Tree [.NP$_{1}$ [.dreißigg ]
+          [.N$_{1}^{'}$ [.N$_{1}$ Prozent ]
+                    [.DP [.D der ] [.NP$_{2}$ Studierenden ] ] ] ]
+\end{minipage}
+\begin{minipage}[t]{0.5\linewidth}
+ \noindent b. \textit{Juxtaposed structure} \\ \\
+     \Tree [.NP$_{1}$ [.NP$_{1}$ [.dreißigg ] [.N$_{1}$ Prozent ] ]
+           [.NP$_{2}$ Studierende ] ]                  
+\end{minipage}
+
+This bipartite DP analysis can be plausibly extended to Italian. Syntactically also Italian proportions, due to their selectional properties, have a double nature: they can be part either of a partitive DP \ref{part} (genitive structure), like numerals or weak quantifiers, selecting a definite DP, or they can be part of a pseudo-partitive DP \ref{pseudo-part} (juxtaposed structure), behaving like a measure phrase selecting an indefinite PP/NP.\footnote{We assume the classic analysis of partitives positing the presence of an invisible intermediate noun between the numeral and the PP proper, indicated by \textit{\sout{books}} in \ref{part} (from \citealt{jac77} to \citealt{fal19}). In partitive proportions this noun position is occupied by the outer noun.} 
+
+\ex. \a. \textit{Partitive} \label{part} \\
+\gll \{il / un\} dieci percento dei libri / tre \sout{libri} dei libri \\ 
+          \{the / a\} ten percent {of the} books / three \sout{books} {of the} books \\ 
+     \b. \textit{Pseudo-partitive} \label{pseudo-part} \\
+	 \gll \{*il / un\} dieci percento di libri / una scatola di libri \\
+	       \{the / a\} ten percent of books / a box of books \\ 
+
+Indeed, \citet{esp21} propose that Romance \textit{de} is an operator with two
+functions: in partitives a \textsc{relator}, which ties the QP to the DP,
+leading to a double DP structure; in pseudo-partitives a
+\textit{\textsc{de}-operator} marking indefiniteness and leading to a
+mono-projectional DP, similarly to S\&co's juxtaposed German structures. We can
+thus assume, following S\&co (see \ref{structure}), that in partitives the proportion denominator
+form a constituent with the inner noun and is separated from its numerator \ref{part}, so
+they do not form a movable constituent, whereas in pseudo-partitives they form
+a movable NP constituent ((weak D) + numeral + proportion \ref{pseudo-part})
+which according to S\&co undergoes QR.\footnote{QR from this structure applies
+also with absolute measure phrases, but its effects are not visible on the
+interpretation due to their intersective nature (see discussion of Figure
+\ref{fig3}).}
+
+The idea that the inner noun of pseudo-partitive proportions undergoes QR is promising for an explanation of pre-V vs. post-V asymmetries (\ref{gen3} and \ref{gen5}) and of the new information requirement seen in main clauses in Italian and other languages \ref{semgen3}. As observed by \citet[Table1]{ahn17}, this asymmetry does arise in Romance languages and in English, but it does not arise in German. Crucially, the languages where the subject-object asymmetries are attested are sensitive to the \textit{empty category principle} (ECP) (\citealt[\S\S4.4]{cho81}), whereas German is not \citep{riz90}. Therefore, it is possible to speculate that sub-extraction of the numeral + outer noun is blocked by the \textit{freezing} of the subject position in ECP sensitive languages (\citealt{riz06}). This would explain also the absence of the subject-object asymmetries in subordinate clauses, which can be insensitive to the ECP and whose subjects does not get \textit{frozen}. 
+
+If such a line of analysis proves correct, a substantial part of S\&co's proposal could be straightforwardly applied to the Italian data and receive further empirical support. The main issue is that part of their proposal is crucially built on the analysis of contrastive focus, which is empirically irrelevant in Italian. However, in S\&co's proposals QR is motivated by a semantic type mismatch and independent from contrastive focus (for example \citealt[\S\S\S4.3.1]{pas22}). Furthermore, a few syntactic aspects peculiar of Italian remain to be technically explained, namely how verb agreement shapes the DP format and why there is a general requirement of an overt determiner in front of Italian percentages, absent in other languages. 
+
+Concerning verb agreement and how it affects the DP format, \citet[\S1]{man19} proposes two different syntactic structures to account for the possibility of head agreement or inner noun (\textit{embedded}) agreement with (pseudo-)partitives \ref{senator} (\citealt[ex.3]{man19}). In particular, the author suggests the two structures in \ref{heada} and \ref{embed} for head and embedded agreement respectively (\citealt[ex.5,6]{man19}). In \ref{heada} agreement with the inner DP is impossible for locality reasons, due to the presence of PP, and verb agreement with the entire DP takes place. In \ref{embed} the inner DP, instead of P, labels the embedded genitive and \textit{una parte} (`a part') is construed as a phrasal modifier, thus the $\varphi$-features of the embedded DP are transmitted to the entire DP, and verb agreement with the inner noun appears.
+
+\exg. Una parte di/dei senatori si è astenuta/sono astenuti. \\
+      a   part$_{F.SG}$ of/{of the} senators$_{M.PL}$ self is abstained$_{F.SG}$/are abstained$_{M.PL}$ \\
+	 \glt `A part of the senators has/have abstained.' \label{senator}
+
+\ex. \a. [$_{DP(\varphi)}$ una [$_{NP(\varphi)}$ parte [$_{PP}$ di/de [$_{DP}$ (i) senatori]]] si \`{e} \ldots \label{heada} \hfill{\textit{Head}}
+   \b. [$_{DP(\varphi)}$ [una parte] [$_{DP(\varphi)}$ di/de [$_{DP(\varphi)}$ (i) senatori]]] si sono \ldots \label{embed} \hfill{\textit{Embedded}}
+	
+The proposal conflates the constituency of partitives and pseudo-partitives measures thus cutting across the two structures proposed by S\&co \ref{structure} which can be extended to Romance languages (\ref{part}-\ref{pseudo-part}) to explain how non-conservativity arises through QR-movement. In particular in the structure for head agreement \ref{heada} the numeral + outer noun do not form a movable constituent, whereas the structure for embedded agreement \ref{embed} allows the movement of the numeral + outer noun, since they form a phrase. This is the opposite of what we would expect if this proposal for explaining inner noun agreement was compatible with S\&co's analysis. However, \citesax{man19} bipartite structures, proposed to explain the two verb agreement options with absolute measures, provide a starting point for a theory accounting also for the conservative and non-conservative interpretations of Italian proportions with different agreement patterns.
+
+\citet[\S\S4.1]{fal19}, comparing Italian and English percentages and fractions, offer a possible explanation of the requirement of an overt determiner in front of Italian percentages. However, it does not consider the conservative vs. non-conservative interpretations of proportions and therefore has nothing to say about the other empirical generalisations concerning (non-)conservativity. Following \citesax{lon94} proposal that Italian, contrary to English, is a \textit{strong reference} language overtly associating both object- and kind-referential nouns (proper names and referential generics) with D, the authors propose that percentages, like proper names and referential generics, involve a \textit{generic determiner}.
+This generic D is seen in \ref{percent-it} where no modifier is required. Instead English does have a non-generic definite determiner so that  \ref{percent-eng} is ungrammatical, unless a relative clause is present \ref{FTimes} \citep[ex.54,55,56]{fal19}. 
+
+\exg. *(Il) \{\checkmark quaranta percento / \checkmark cento percento\} dei dottori raccomanda questo dentifricio. \\
+       the \{forty percent / {one hundred} percent\} {of the} doctors recommends this toothpaste \\
+       \glt `The \{forty percent / one hundred percent\} of the doctors recommends this toothpaste.' \label{percent-it}
+
+\ex. \a. ??The \{twenty percent / one hundred percent\} of the doctors recommend this.\label{percent-eng}
+     \b. The fifty percent of Americans who don't pay income tax will never be a good revenue source. \label{FTimes}
+
+As we saw, when we consider indefinite inner nouns in percentage DPs, a relative clause is actually needed in Italian like in English (\ref{percentindef} repeated in \ref{percentindeff}), but we would not expect this according to the hypothesis that the PM DP definite is a purely generic definite article. Only in the cases involving mass nouns \ref{perdefmasss} (see the discussion of \ref{perdefmass}), the relative clause is not required and actually not allowed to attach to the entire PM DP (attachment to the inner noun is marginally acceptable: \textit{??}), therefore perhaps only this case involves the generic definite proposed by \citet{fal19}.
+
+\exg. \{il / quel\} dieci percento di studenti *(che hanno superato l'esame)\\
+      \{the / that\} ten percent of students (that have passed {the exam})\\ \label{percentindeff}
+	  
+\exg. In questa torta c'\`{e} il dieci percento di zucchero (*che ho comprato).\\ 
+	  in this cake {there is} the ten percent of sugar (that have bought) \\ 
+     \glt `In this cake there is ten percent sugar.' \label{perdefmasss}
+	 
+
+We conclude that none of the proposals advanced in the literature so far fully accounts for the empirical complexity of Italian proportions uncovered here. However, the ideas presented in this section show that they provide a solid starting point for a full-fledged analysis to be developed in future research. 
+
+\section*{Abbreviations} \label{abbrev}
+
+\textsc{acc} = accusative, \textsc{clf} = classifier, \textsc{d} = determiner, \textsc{dat} = dative, \textsc{dp} = determiner phrase, \textsc{ecp} = empty category principle, \textsc{foc} = Focus, \textsc{f} = feminine, \textsc{gen} = genitive, \textsc{m} = masculine, \textsc{nom} = nominative, \textsc{np} = noun phrase, \textsc{p} = preposition, \textsc{pl} = plural, \textsc{pm} = proportional measurement, \textsc{pp} = prepositional phrase, \textsc{qr} = quantifier raising, \textsc{sg} = singular, \textsc{v} = verb, \textsc{vp} = verb phrase
+
+\section*{Funding information}
+
+The research reported in this paper was supported financially by a grant from the European Union’s Horizon 2020 research and innovation programme under the Marie Skło\-dow\-ska\--Cu\-rie grant agreement No 796332 for the SEMSUBSET project.
+
+\section*{Acknowledgements}
+
+I wish to thank Valentina Bianchi, Silvio Cruschina, Uli Sauerland, and Roberto Zam\-pa\-rel\-li for discussions on data and ideas reported here, the anonymous reviewers and the editors for their substantial contributions to the quality of this paper, and my informants for their judgements and feedback.
+
+\section*{Competing interests}
+
+The author has no competing interests to declare.
+	
+\bibliography{italian_proportions_final}
+
+\end{document}
